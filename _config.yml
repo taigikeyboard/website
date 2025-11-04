@@ -134,7 +134,10 @@ sass:
 exclude:
   - LICENSE
   - README.md
-  - CNAME
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
 
 collections:
   pages:
