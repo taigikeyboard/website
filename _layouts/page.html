@@ -1,5 +1,4 @@
 ---
-# Front matter comment to ensure Jekyll properly reads file.
 ---
 
 <!DOCTYPE html>
@@ -13,20 +12,16 @@
 	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.app_name }}</title>
 	<meta name="description" content="{{ site.app_description }}">
 
-	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/icon/32.png' | relative_url }}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/icon/16.png' | relative_url }}">
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/icon/180.png' | relative_url }}">
 
-	<!-- Smart App Banner -->
 	{% if site.enable_smart_app_banner %}
 	<meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
 	{% endif %}
 
-	<!-- SEO -->
 	{% seo %}
 
-	<!-- CSS Stylesheet -->
 	<link rel="stylesheet" href="{{ '/main.css' | relative_url }}">
 </head>
 
@@ -37,7 +32,6 @@
 		{{ content }}
 	</main>
 
-	<!-- Footer -->
 	<footer>
 		<div class="footer-content">
 			<div class="footer-links">

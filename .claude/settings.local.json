@@ -11,7 +11,9 @@
       "Bash(identify:*)",
       "Bash(sips -g all:*)",
       "Bash(mkdir:*)",
-      "Bash(tree:*)"
+      "Bash(tree:*)",
+      "Bash(sips:*)",
+      "Bash(pngquant:*)"
     ],
     "deny": [],
     "ask": []

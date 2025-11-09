@@ -10,32 +10,26 @@
 	<meta name="description" content="{{ site.app_description }}">
 	<meta name="keywords" content="台語,輸入法,台語鍵盤,POJ,台羅,白話字,Taigi,Taiwanese">
 
-	<!-- Favicon -->
 	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/icon/32.png' | relative_url }}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/icon/16.png' | relative_url }}">
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/icon/180.png' | relative_url }}">
 
-	<!-- Smart App Banner -->
 	{% if site.enable_smart_app_banner %}
 	<meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
 	{% endif %}
 
-	<!-- SEO -->
 	{% seo %}
 
-	<!-- CSS Stylesheet -->
 	<link rel="stylesheet" href="{{ '/main.css' | relative_url }}">
 </head>
 
 <body>
 	{% include navbar.html %}
 
-	<!-- Hero Section -->
 	<section id="hero" class="hero">
 		<div class="hero-container">
 			<div class="phone-preview">
 				<div class="phone-frame">
-					<!-- 螢幕內容：影片 -->
 					<div class="phone-screen">
 						<video autoplay loop muted playsinline preload="auto">
 							<source src="{{ '/assets/demo.mp4' | relative_url }}" type="video/mp4">
@@ -67,7 +61,6 @@
 
 	<hr class="section-divider">
 
-	<!-- 功能特色 - 網格式佈局 -->
 	<section id="features" class="features-grid-section">
 		<h2 class="section-title">{{ site.nav_labels.features }}</h2>
 		<div class="features-grid">
@@ -86,24 +79,20 @@
 
 	<hr class="section-divider">
 
-	<!-- 齒盤畫面 -->
 	<section id="screenshots" class="feature-section">
 		<h2 class="section-title">{{ site.nav_labels.screenshots }}</h2>
-		<hr class="section-divider">
 		<div class="feature-item">
-			<div class="feature-content">
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+			<div class="feature-image">
+				<img src="{{ '/assets/screenshots/keyboard-layout-1.png' | relative_url }}" alt="鍵盤配置 1">
 			</div>
 		</div>
 	</section>
 
 	<hr class="section-divider">
 
-	<!-- 如何使用 -->
 	<section id="how-to-use" class="feature-section">
 		<h2 class="section-title">{{ site.nav_labels.how_to_use }}</h2>
 		<hr class="section-divider">
-		<!-- 使用步驟 1 -->
 		<div id="download-section" class="feature-item">
 			<div class="feature-content">
 				<h2>{{ site.nav_labels.download }}</h2>
@@ -114,7 +103,6 @@
 
 	<hr class="section-divider">
 
-	<!-- 贊助支持 -->
 	<section id="sponsor" class="feature-section" style="padding: 8rem 2rem;">
 		<div class="feature-item" style="margin-bottom: 0;">
 			<div class="feature-content">
@@ -125,7 +113,6 @@
 		</div>
 	</section>
 
-	<!-- Footer -->
 	<footer>
 		<div class="footer-content">
 			<div class="footer-links">
