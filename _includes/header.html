@@ -9,7 +9,7 @@
 				</defs>
 			</svg>
 			{% if page.url != '/' %}
-				<a href="../" target="_self"><img class="headerIcon" src="{{ site.app_icon | relative_url }}"></a>
+				<a href="/" target="_self"><img class="headerIcon" src="{{ site.app_icon | relative_url }}"></a>
 			{% else %}
 				<img class="headerIcon" src="{{ site.app_icon | relative_url }}">
 			{% endif %}
@@ -19,14 +19,11 @@
 	</div>
 	<nav class="scroll">
 		<ul>
-			{% for page in site.pages %}
-				{% if page.include_in_header == true %}
-				<li><a href="{{ page.url | relative_url }}" target="_self">{{ page.title }}</a></li>
-				{% endif %}
-			{% endfor %}
-			{% if site.presskit_download_link %}
-				<li><a href="{{ site.presskit_download_link }}">Press Kit</a></li>
-			{% endif %}
+			<li><a href="/features" target="_self">功能特色</a></li>
+			<li><a href="/issues" target="_self">問題回報</a></li>
+			<li><a href="/about" target="_self">關於我</a></li>
+			<li><a href="/sponsor" target="_self">贊助</a></li>
+			<li><a href="/download" target="_self">下載</a></li>
 		</ul>
 	</nav>
 </header>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>{{ site.app_name }} - {{ site.app_description }}</title>
+	<meta name="description" content="{{ site.app_description }}">
+	<meta name="keywords" content="台語,輸入法,台語鍵盤,POJ,台羅,白話字,Taigi,Taiwanese">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/icon/32.png' | relative_url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/icon/16.png' | relative_url }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/icon/180.png' | relative_url }}">
+
+	<!-- Smart App Banner -->
+	{% if site.enable_smart_app_banner %}
+	<meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
+	{% endif %}
+
+	<!-- SEO -->
+	{% seo %}
+
+	<!-- CSS Stylesheets -->
+	<link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
+	<link rel="stylesheet" href="{{ '/assets/css/navbar.css' | relative_url }}">
+</head>
+
+<body>
+	{% include navbar.html %}
+
+	<!-- Hero Section -->
+	<section id="hero" class="hero">
+		<div class="hero-container">
+			<div class="phone-preview">
+				<div class="phone-frame">
+					<!-- 螢幕內容：影片 -->
+					<div class="phone-screen">
+						<video autoplay loop muted playsinline preload="auto">
+							<source src="{{ '/assets/demo.mp4' | relative_url }}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero-text">
+				<h1>
+					<img src="{{ '/icon/180.png' | relative_url }}" alt="Logo">
+					<span>{{ site.app_name }}</span>
+				</h1>
+				<p class="hero-subtitle">{{ site.app_description }}</p>
+
+				<div class="download-buttons">
+					{% if site.playstore_link %}
+					<a href="{{ site.playstore_link }}" target="_blank">
+						<img src="{{ '/assets/playstore.png' | relative_url }}" alt="Google Play 下載">
+					</a>
+					{% endif %}
+					<a href="{{ site.appstore_link }}" target="_blank">
+						<img src="{{ '/assets/appstore.png' | relative_url }}" alt="App Store 下載">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 功能特色 - Apple 風格單欄式 -->
+	<section id="features" class="feature-section">
+		<!-- 功能 1 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>多種書寫系統</h2>
+				<p>支援漢字、白話字 (POJ) 和台羅拼音 (Tâi-lô)，讓你用最熟悉的方式輸入台語</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/iphone_photo/Group 1.png' | relative_url }}" alt="多種書寫系統">
+			</div>
+		</div>
+
+		<!-- 功能 2 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>智能輸入</h2>
+				<p>智能選字建議和常用詞快速輸入，讓打字更流暢、更有效率</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/iphone_photo/Group 2.png' | relative_url }}" alt="智能輸入">
+			</div>
+		</div>
+
+		<!-- 功能 3 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>客製化主題</h2>
+				<p>多種鍵盤主題和配置選項，打造專屬於你的台語輸入體驗</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/android_photo/Group 1.png' | relative_url }}" alt="客製化主題">
+			</div>
+		</div>
+
+		<!-- 功能 4 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>跨平台支援</h2>
+				<p>iOS 和 Android 完整支援，無論使用什麼裝置都能流暢輸入台語</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/android_photo/Group 2.png' | relative_url }}" alt="跨平台支援">
+			</div>
+		</div>
+	</section>
+
+	<!-- 如何使用 - Apple 風格單欄式 -->
+	<section id="how-to-use" class="feature-section">
+		<!-- 使用步驟 1 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>下載安裝</h2>
+				<p>從 App Store 或 Google Play 下載台語齒盤，開始你的台語輸入之旅</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/iphone_photo/Group 1.png' | relative_url }}" alt="下載安裝">
+			</div>
+		</div>
+
+		<!-- 使用步驟 2 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>啟用鍵盤</h2>
+				<p>在系統設定中啟用台語齒盤，設定為你的預設輸入法</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/iphone_photo/Group 2.png' | relative_url }}" alt="啟用鍵盤">
+			</div>
+		</div>
+
+		<!-- 使用步驟 3 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>開始輸入</h2>
+				<p>選擇你喜歡的輸入方式，開始流暢地輸入台語</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/android_photo/Group 1.png' | relative_url }}" alt="開始輸入">
+			</div>
+		</div>
+	</section>
+
+	<!-- 問題回報 -->
+	<section id="issues" class="feature-section" style="padding: 8rem 2rem;">
+		<div class="feature-item" style="margin-bottom: 0;">
+			<div class="feature-content">
+				<h2>問題回報</h2>
+				<p>遇到問題或有建議嗎？歡迎透過表單回報，我們會盡快處理並改善。</p>
+			</div>
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSd7PEppQ9MdAptvoY-PaaXDlbbL9Gq9Y4lFjgU9sLz4ENiPoA/viewform"
+				target="_blank" class="sponsor-button">填寫問題回報表單</a>
+		</div>
+	</section>
+
+	<!-- 贊助支持 -->
+	<section id="sponsor" class="feature-section" style="padding: 8rem 2rem;">
+		<div class="feature-item" style="margin-bottom: 0;">
+			<div class="feature-content">
+				<h2>贊助支持</h2>
+				<p>感謝你願意支持台語齒盤的開發！你的贊助將幫助我們持續改進，讓台語輸入更加便利。</p>
+			</div>
+			<a href="https://portaly.cc/siansiansu/support" target="_blank" class="sponsor-button">前往贊助頁面</a>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-content">
+			<div class="footer-links">
+				<a href="#features">功能特色</a>
+				<a href="#how-to-use">如何使用</a>
+				<a href="#issues">問題回報</a>
+				<a href="#sponsor">贊助</a>
+				<a href="/privacypolicy.html">隱私政策</a>
+			</div>
+			<p class="footer-copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.app_name }}. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+
+</html>

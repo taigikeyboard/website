@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(bundle update:*)",
+      "Bash(bundle exec jekyll build:*)",
+      "Bash(bundle exec jekyll serve:*)",
+      "WebFetch(domain:emilbaehr.github.io)",
+      "Bash(cat:*)",
+      "WebFetch(domain:portaly.cc)",
+      "Bash(fd:*)",
+      "Bash(identify:*)",
+      "Bash(sips -g all:*)",
+      "Bash(mkdir:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
