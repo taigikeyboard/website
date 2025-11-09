@@ -51,7 +51,7 @@
 				</h1>
 				<p class="hero-subtitle">{{ site.app_description }}</p>
 
-				<div class="download-buttons">
+				<div id="download" class="download-buttons">
 					{% if site.playstore_link %}
 					<a href="{{ site.playstore_link }}" target="_blank">
 						<img src="{{ '/assets/playstore.png' | relative_url }}" alt="Google Play 下載">
@@ -65,85 +65,31 @@
 		</div>
 	</section>
 
-	<!-- 功能特色 - Apple 風格單欄式 -->
-	<section id="features" class="feature-section">
-		<!-- 功能 1 -->
-		<div class="feature-item">
-			<div class="feature-content">
-				<h2>多種書寫系統</h2>
-				<p>支援漢字、白話字 (POJ) 和台羅拼音 (Tâi-lô)，讓你用最熟悉的方式輸入台語</p>
+	<!-- 功能特色 - 網格式佈局 -->
+	<section id="features" class="features-grid-section">
+		<h2 class="section-title">功能特色</h2>
+		<div class="features-grid">
+			{% for feature in site.features %}
+			{% if feature.title %}
+			<div class="feature-card">
+				<div class="feature-card-content">
+					<h3>{{ feature.title }}</h3>
+					<p>{{ feature.description }}</p>
+				</div>
 			</div>
-			<div class="feature-image">
-				<img src="{{ '/iphone_photo/Group 1.png' | relative_url }}" alt="多種書寫系統">
-			</div>
-		</div>
-
-		<!-- 功能 2 -->
-		<div class="feature-item">
-			<div class="feature-content">
-				<h2>智能輸入</h2>
-				<p>智能選字建議和常用詞快速輸入，讓打字更流暢、更有效率</p>
-			</div>
-			<div class="feature-image">
-				<img src="{{ '/iphone_photo/Group 2.png' | relative_url }}" alt="智能輸入">
-			</div>
-		</div>
-
-		<!-- 功能 3 -->
-		<div class="feature-item">
-			<div class="feature-content">
-				<h2>客製化主題</h2>
-				<p>多種鍵盤主題和配置選項，打造專屬於你的台語輸入體驗</p>
-			</div>
-			<div class="feature-image">
-				<img src="{{ '/android_photo/Group 1.png' | relative_url }}" alt="客製化主題">
-			</div>
-		</div>
-
-		<!-- 功能 4 -->
-		<div class="feature-item">
-			<div class="feature-content">
-				<h2>跨平台支援</h2>
-				<p>iOS 和 Android 完整支援，無論使用什麼裝置都能流暢輸入台語</p>
-			</div>
-			<div class="feature-image">
-				<img src="{{ '/android_photo/Group 2.png' | relative_url }}" alt="跨平台支援">
-			</div>
+			{% endif %}
+			{% endfor %}
 		</div>
 	</section>
 
-	<!-- 如何使用 - Apple 風格單欄式 -->
+	<!-- 如何使用 -->
 	<section id="how-to-use" class="feature-section">
+		<h2 class="section-title">如何使用</h2>
 		<!-- 使用步驟 1 -->
-		<div class="feature-item">
+		<div id="download-section" class="feature-item">
 			<div class="feature-content">
-				<h2>下載安裝</h2>
+				<h2>掠落來</h2>
 				<p>從 App Store 或 Google Play 下載台語齒盤，開始你的台語輸入之旅</p>
-			</div>
-			<div class="feature-image">
-				<img src="{{ '/iphone_photo/Group 1.png' | relative_url }}" alt="下載安裝">
-			</div>
-		</div>
-
-		<!-- 使用步驟 2 -->
-		<div class="feature-item">
-			<div class="feature-content">
-				<h2>啟用鍵盤</h2>
-				<p>在系統設定中啟用台語齒盤，設定為你的預設輸入法</p>
-			</div>
-			<div class="feature-image">
-				<img src="{{ '/iphone_photo/Group 2.png' | relative_url }}" alt="啟用鍵盤">
-			</div>
-		</div>
-
-		<!-- 使用步驟 3 -->
-		<div class="feature-item">
-			<div class="feature-content">
-				<h2>開始輸入</h2>
-				<p>選擇你喜歡的輸入方式，開始流暢地輸入台語</p>
-			</div>
-			<div class="feature-image">
-				<img src="{{ '/android_photo/Group 1.png' | relative_url }}" alt="開始輸入">
 			</div>
 		</div>
 	</section>
@@ -165,6 +111,7 @@
 			<div class="footer-links">
 				<a href="#features">功能特色</a>
 				<a href="#how-to-use">如何使用</a>
+				<a href="#download-section">掠落來</a>
 				<a href="{{ '/issues' | relative_url }}">問題回報</a>
 				<a href="#sponsor">贊助</a>
 				<a href="{{ '/privacypolicy.html' | relative_url }}">隱私政策</a>

@@ -7,7 +7,7 @@ ios_app_country                           : us                                  
 
 appstore_link                             : https://apps.apple.com/app/id6751871806  # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
 playstore_link                            : https://play.google.com/store/apps/details?id=com.siansiansu.taigikeyboard          # Enter Google Play Store URL.
-presskit_download_link                    :                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
+presskit_download_link                    :                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file).
                                                                                       # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
 
 app_icon                                  : # assets/appicon.png
@@ -40,21 +40,29 @@ mastodon_link                             :
 # Feature List
 features                                  :
 
-  - title                                 : 多種書寫系統
-    description                           : 支援漢字、白話字 (POJ) 和台羅拼音 (Tâi-lô)
+  - title                                 : Lorem Ipsum Dolor
+    description                           : Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
     fontawesome_icon_name                 : language
 
-  - title                                 : 智能輸入
-    description                           : 智能選字建議和常用詞快速輸入
+  - title                                 : Consectetur Adipiscing
+    description                           : Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
     fontawesome_icon_name                 : brain
 
-  - title                                 : 客製化
-    description                           : 多種鍵盤主題和配置選項
+  - title                                 : Duis Aute Irure
+    description                           : Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur
     fontawesome_icon_name                 : palette
 
-  - title                                 : 跨平台
-    description                           : iOS 和 Android 完整支援
+  - title                                 : Excepteur Sint
+    description                           : Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
     fontawesome_icon_name                 : mobile-alt
+
+  - title                                 : Sed Ut Perspiciatis
+    description                           : Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam
+    fontawesome_icon_name                 : star
+
+  - title                                 : Nemo Enim Ipsam
+    description                           : Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores
+    fontawesome_icon_name                 : heart
 
 
 
@@ -128,9 +136,9 @@ markdown: kramdown
 
 # Site info for SEO
 title: "台語齒盤"
-description: "台語輸入法 - 支援漢字、白話字 (POJ) 和台羅拼音 (Tâi-lô)，提供智能選字建議和常用詞快速輸入"
+description: "專為台語使用者設計的手機仔齒盤"
 url: ""
-author: "台語齒盤團隊"
+author: "Bîn-hiân"
 
 # Plugins
 plugins:
