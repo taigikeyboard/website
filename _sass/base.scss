@@ -39,13 +39,14 @@ body {
 	background-color: $body-color;
 }
 
-a:link,
-a:hover,
-a:visited,
-a:active {
-	color: $accent-color;
-	text-decoration: none;
-}
+// Removed global link styles to avoid conflicts with component-specific styles
+// a:link,
+// a:hover,
+// a:visited,
+// a:active {
+// 	color: $accent-color;
+// 	text-decoration: none;
+// }
 
 // Shadows
 $drop-shadow: 	drop-shadow(0px 5px 10px rgba(#000, 0.1)) 

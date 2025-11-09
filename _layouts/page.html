@@ -5,18 +5,51 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 
-{% include head.html %}
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<body class="subPageBody">
-    <div class="headerBackground subPageHeaderBackground">
-        <div class="container subPageContainer">
-        {% include header.html %}
-            <article class="page markdown-body">
-                {{ content }}
-            </article>
-        </div>
-        {% include appstoreimages.html %}
-    </div>
+	<title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.app_name }}</title>
+	<meta name="description" content="{{ site.app_description }}">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/icon/32.png' | relative_url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/icon/16.png' | relative_url }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/icon/180.png' | relative_url }}">
+
+	<!-- Smart App Banner -->
+	{% if site.enable_smart_app_banner %}
+	<meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
+	{% endif %}
+
+	<!-- SEO -->
+	{% seo %}
+
+	<!-- CSS Stylesheet -->
+	<link rel="stylesheet" href="{{ '/main.css' | relative_url }}">
+</head>
+
+<body>
+	{% include navbar.html %}
+
+	<main style="margin-top: 80px; padding: 4rem 2rem; max-width: 1400px; margin-left: auto; margin-right: auto;">
+		{{ content }}
+	</main>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-content">
+			<div class="footer-links">
+				<a href="{{ '/' | relative_url }}#features">功能特色</a>
+				<a href="{{ '/' | relative_url }}#how-to-use">如何使用</a>
+				<a href="{{ '/issues' | relative_url }}">問題回報</a>
+				<a href="{{ '/' | relative_url }}#sponsor">贊助</a>
+				<a href="{{ '/privacypolicy.html' | relative_url }}">隱私政策</a>
+			</div>
+			<p class="footer-copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.app_name }}. All rights reserved.</p>
+		</div>
+	</footer>
 </body>
 
 </html>

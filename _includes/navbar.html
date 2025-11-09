@@ -1,15 +1,15 @@
 <!-- 導覽列 -->
 <nav class="navbar">
 	<div class="navbar-container">
-		<a href="/" class="navbar-brand">
+		<a href="{{ '/' | relative_url }}" class="navbar-brand">
 			<img src="{{ '/icon/180.png' | relative_url }}" alt="{{ site.app_name }}">
 			<span>{{ site.app_name }}</span>
 		</a>
 		<ul class="navbar-menu">
-			<li><a href="/#features">功能特色</a></li>
-			<li><a href="/#how-to-use">如何使用</a></li>
-			<li><a href="/#issues">問題回報</a></li>
-			<li><a href="/#sponsor">贊助</a></li>
+			<li><a href="{{ '/' | relative_url }}#features">功能特色</a></li>
+			<li><a href="{{ '/' | relative_url }}#how-to-use">如何使用</a></li>
+			<li><a href="{{ '/issues' | relative_url }}">問題回報</a></li>
+			<li><a href="{{ '/' | relative_url }}#sponsor">贊助</a></li>
 		</ul>
 	</div>
 </nav>

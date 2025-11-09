@@ -23,9 +23,8 @@
 	<!-- SEO -->
 	{% seo %}
 
-	<!-- CSS Stylesheets -->
-	<link rel="stylesheet" href="{{ '/assets/css/landing.css' | relative_url }}">
-	<link rel="stylesheet" href="{{ '/assets/css/navbar.css' | relative_url }}">
+	<!-- CSS Stylesheet -->
+	<link rel="stylesheet" href="{{ '/main.css' | relative_url }}">
 </head>
 
 <body>
@@ -149,18 +148,6 @@
 		</div>
 	</section>
 
-	<!-- 問題回報 -->
-	<section id="issues" class="feature-section" style="padding: 8rem 2rem;">
-		<div class="feature-item" style="margin-bottom: 0;">
-			<div class="feature-content">
-				<h2>問題回報</h2>
-				<p>遇到問題或有建議嗎？歡迎透過表單回報，我們會盡快處理並改善。</p>
-			</div>
-			<a href="https://docs.google.com/forms/d/e/1FAIpQLSd7PEppQ9MdAptvoY-PaaXDlbbL9Gq9Y4lFjgU9sLz4ENiPoA/viewform"
-				target="_blank" class="sponsor-button">填寫問題回報表單</a>
-		</div>
-	</section>
-
 	<!-- 贊助支持 -->
 	<section id="sponsor" class="feature-section" style="padding: 8rem 2rem;">
 		<div class="feature-item" style="margin-bottom: 0;">
@@ -178,9 +165,9 @@
 			<div class="footer-links">
 				<a href="#features">功能特色</a>
 				<a href="#how-to-use">如何使用</a>
-				<a href="#issues">問題回報</a>
+				<a href="{{ '/issues' | relative_url }}">問題回報</a>
 				<a href="#sponsor">贊助</a>
-				<a href="/privacypolicy.html">隱私政策</a>
+				<a href="{{ '/privacypolicy.html' | relative_url }}">隱私政策</a>
 			</div>
 			<p class="footer-copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.app_name }}. All rights reserved.</p>
 		</div>

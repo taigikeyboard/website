@@ -10,7 +10,8 @@
       "Bash(fd:*)",
       "Bash(identify:*)",
       "Bash(sips -g all:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(tree:*)"
     ],
     "deny": [],
     "ask": []
