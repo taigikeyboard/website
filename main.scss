@@ -5,7 +5,7 @@
 $body-color: {{ site.body_background_color }};
 
 $header-image: "{{ site.cover_image }}";
-$device-color: "assets/{{ site.device_color }}.png";
+$device-color: "{{ '/assets/' | append: site.device_color | append: '.png' | relative_url }}";
 $phone-frame-image: "{{ '/assets/black.png' | relative_url }}";
 
 $accent-color: {{ site.link_color }};
