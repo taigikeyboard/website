@@ -69,7 +69,7 @@
 
 	<!-- 功能特色 - 網格式佈局 -->
 	<section id="features" class="features-grid-section">
-		<h2 class="section-title">功能特色</h2>
+		<h2 class="section-title">{{ site.nav_labels.features }}</h2>
 		<div class="features-grid">
 			{% for feature in site.features %}
 			{% if feature.title %}
@@ -86,14 +86,27 @@
 
 	<hr class="section-divider">
 
+	<!-- 齒盤畫面 -->
+	<section id="screenshots" class="feature-section">
+		<h2 class="section-title">{{ site.nav_labels.screenshots }}</h2>
+		<hr class="section-divider">
+		<div class="feature-item">
+			<div class="feature-content">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+			</div>
+		</div>
+	</section>
+
+	<hr class="section-divider">
+
 	<!-- 如何使用 -->
 	<section id="how-to-use" class="feature-section">
-		<h2 class="section-title">如何使用</h2>
+		<h2 class="section-title">{{ site.nav_labels.how_to_use }}</h2>
 		<hr class="section-divider">
 		<!-- 使用步驟 1 -->
 		<div id="download-section" class="feature-item">
 			<div class="feature-content">
-				<h2>掠落來</h2>
+				<h2>{{ site.nav_labels.download }}</h2>
 				<p>從 App Store 或 Google Play 下載台語齒盤，開始你的台語輸入之旅</p>
 			</div>
 		</div>
@@ -105,7 +118,7 @@
 	<section id="sponsor" class="feature-section" style="padding: 8rem 2rem;">
 		<div class="feature-item" style="margin-bottom: 0;">
 			<div class="feature-content">
-				<h2>贊助支持</h2>
+				<h2>{{ site.nav_labels.sponsor }}</h2>
 				<p>感謝你願意支持台語齒盤的開發！你的贊助將幫助我們持續改進，讓台語輸入更加便利。</p>
 			</div>
 			<a href="https://portaly.cc/siansiansu/support" target="_blank" class="sponsor-button">前往贊助頁面</a>
@@ -116,12 +129,13 @@
 	<footer>
 		<div class="footer-content">
 			<div class="footer-links">
-				<a href="#features">功能特色</a>
-				<a href="#how-to-use">如何使用</a>
-				<a href="#download-section">掠落來</a>
-				<a href="{{ '/issues' | relative_url }}">問題回報</a>
-				<a href="#sponsor">贊助</a>
-				<a href="{{ '/privacypolicy.html' | relative_url }}">隱私政策</a>
+				<a href="#features">{{ site.nav_labels.features }}</a>
+				<a href="#screenshots">{{ site.nav_labels.screenshots }}</a>
+				<a href="#how-to-use">{{ site.nav_labels.how_to_use }}</a>
+				<a href="#download-section">{{ site.nav_labels.download }}</a>
+				<a href="{{ '/issues' | relative_url }}">{{ site.nav_labels.issues }}</a>
+				<a href="#sponsor">{{ site.nav_labels.sponsor }}</a>
+				<a href="{{ '/privacypolicy.html' | relative_url }}">{{ site.nav_labels.privacy_policy }}</a>
 			</div>
 			<p class="footer-copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.app_name }}. All rights reserved.</p>
 		</div>
