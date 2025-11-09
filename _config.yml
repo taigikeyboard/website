@@ -2,18 +2,18 @@
 page_title                                :                                           # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
 
 # App Info
-ios_app_id                                : 1234793120                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
+ios_app_id                                : 6751871806                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
 ios_app_country                           : us                                        # Required outside USA. Enter 2 letter country code as in https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
 
-appstore_link                             :                                           # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
-playstore_link                            :                                           # Enter Google Play Store URL.
+appstore_link                             : https://apps.apple.com/app/id6751871806  # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
+playstore_link                            : https://play.google.com/store/apps/details?id=com.siansiansu.taigikeyboard          # Enter Google Play Store URL.
 presskit_download_link                    :                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file). 
                                                                                       # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
 
 app_icon                                  : # assets/appicon.png
-app_name                                  : 台語齒盤
+app_name                                  : 台語齒盤 - 台語輸入法
 app_price                                 :
-app_description                           : 台語輸入法
+app_description                           : 專為台語使用者設計的手機仔齒盤
 
 lang: zh-TW
 
@@ -53,7 +53,7 @@ features                                  :
     fontawesome_icon_name                 : palette
 
   - title                                 : 跨平台
-    description                           : iOS 和 iPadOS 完整支援
+    description                           : iOS 和 Android 完整支援
     fontawesome_icon_name                 : mobile-alt
 
 
@@ -128,7 +128,9 @@ markdown: kramdown
 
 # Site info for SEO
 title: "台語齒盤"
+description: "台語輸入法 - 支援漢字、白話字 (POJ) 和台羅拼音 (Tâi-lô)，提供智能選字建議和常用詞快速輸入"
 url: ""
+author: "台語齒盤團隊"
 
 # Plugins
 plugins:

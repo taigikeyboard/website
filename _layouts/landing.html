@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>{{ site.app_name }} - {{ site.app_description }}</title>
+	<meta name="description" content="{{ site.app_description }}">
+	<meta name="keywords" content="台語,輸入法,台語鍵盤,POJ,台羅,白話字,Taigi,Taiwanese">
+
+	<!-- Favicon -->
+	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/icon/32.png' | relative_url }}">
+	<link rel="icon" type="image/png" sizes="16x16" href="{{ '/icon/16.png' | relative_url }}">
+	<link rel="apple-touch-icon" sizes="180x180" href="{{ '/icon/180.png' | relative_url }}">
+
+	<!-- Smart App Banner -->
+	{% if site.enable_smart_app_banner %}
+	<meta name="apple-itunes-app" content="app-id={{ site.ios_app_id }}">
+	{% endif %}
+
+	<!-- SEO -->
+	{% seo %}
+
+	<style>
+		/* 自訂字體 */
+		@font-face {
+			font-family: 'Iansui';
+			src: url('{{ "/assets/Iansui-Regular.ttf" | relative_url }}') format('truetype');
+			font-weight: normal;
+			font-style: normal;
+			font-display: swap;
+		}
+
+		:root {
+			--color-primary: #8da99b;
+			--color-secondary: #610a10;
+			--color-accent: #fab3ad;
+			--color-bg: #F6F0E6;
+			--color-surface: #F6F0E6;
+			--color-text-primary: #2c2827;
+			--color-text-secondary: #57675c;
+			--color-border: rgba(87, 103, 92, 0.2);
+		}
+
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		html {
+			scroll-behavior: smooth;
+			font-size: 62.5%;
+		}
+
+		body {
+			font-family: 'Iansui', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Noto Sans TC", sans-serif;
+			font-size: 1.6rem;
+			line-height: 1.6;
+			color: var(--color-text-primary);
+			background-color: var(--color-bg);
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+
+
+		/* Hero Section - 原本設計風格 */
+		.hero {
+			margin-top: 60px;
+			padding: 6rem 2rem 8rem;
+			background: #F6F0E6;
+			min-height: 85vh;
+			display: flex;
+			align-items: center;
+		}
+
+		.hero-container {
+			max-width: 1400px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: 44% 56%;
+			gap: 4rem;
+			align-items: center;
+			width: 100%;
+		}
+
+		.hero-text {
+			text-align: left;
+			padding: 2rem 3rem 2rem 2rem;
+		}
+
+		.hero h1 {
+			font-size: 5.4rem;
+			font-weight: 500;
+			line-height: 1.08;
+			margin-bottom: 2.4rem;
+			color: var(--color-text-primary);
+			letter-spacing: -0.015em;
+			display: flex;
+			align-items: center;
+			gap: 2rem;
+		}
+
+		.hero h1 img {
+			width: 68px;
+			height: 68px;
+			border-radius: 13px;
+		}
+
+		.hero-subtitle {
+			font-size: 2.6rem;
+			color: var(--color-text-secondary);
+			margin-bottom: 3.5rem;
+			font-weight: 400;
+			line-height: 1.45;
+		}
+
+		.download-buttons {
+			display: flex;
+			gap: 2rem;
+			flex-wrap: wrap;
+		}
+
+		.download-buttons a {
+			transition: transform 0.2s;
+			display: block;
+		}
+
+		.download-buttons img {
+			height: 56px;
+		}
+
+		.download-buttons a:hover {
+			transform: translateY(-2px);
+		}
+
+		/* 手機預覽 - 使用裝置外框 */
+		.phone-preview {
+			display: flex;
+			justify-content: center;
+			align-items: flex-end;
+			position: relative;
+			height: 100%;
+			min-height: 550px;
+		}
+
+		.phone-frame {
+			position: relative;
+			width: 100%;
+			max-width: 350px;
+			height: 755px;
+			background-image: url('/assets/black.png');
+			background-size: 100% auto;
+			background-repeat: no-repeat;
+			background-position: center top;
+			margin-bottom: -2.5rem;
+			margin-left: -2rem;
+		}
+
+		/* 螢幕內容區域（影片） */
+		.phone-screen {
+			position: absolute;
+			top: 23px;
+			left: 26px;
+			width: 298px;
+			height: 645px;
+			overflow: hidden;
+			border-radius: 40px;
+		}
+
+		.phone-screen video {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		/* Section 基礎樣式 - 單欄設計 */
+		section {
+			padding: 8rem 2rem;
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+
+		/* 功能展示 - Apple 風格單欄 */
+		.feature-section {
+			padding: 12rem 2rem;
+		}
+
+		.feature-item {
+			margin-bottom: 16rem;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+		}
+
+		.feature-item:last-child {
+			margin-bottom: 0;
+		}
+
+		.feature-content {
+			max-width: 900px;
+			margin-bottom: 5rem;
+		}
+
+		.feature-item h2 {
+			font-size: 4.8rem;
+			font-weight: 500;
+			line-height: 1.1;
+			margin-bottom: 2rem;
+			color: var(--color-text-primary);
+			letter-spacing: -0.01em;
+		}
+
+		.feature-item p {
+			font-size: 2.1rem;
+			color: var(--color-text-secondary);
+			line-height: 1.5;
+		}
+
+		.feature-image {
+			max-width: 1100px;
+			width: 100%;
+			border-radius: 20px;
+			overflow: hidden;
+			border: 1px solid var(--color-border);
+		}
+
+		.feature-image img {
+			width: 100%;
+			height: auto;
+			display: block;
+		}
+
+		/* 移除交替背景 - 統一使用 #F6F0E6 */
+		.feature-item:nth-child(even) {
+			background-color: #F6F0E6;
+		}
+
+		/* 贊助按鈕 */
+		.sponsor-button {
+			display: inline-block;
+			padding: 1.8rem 4rem;
+			margin-top: 2rem;
+			font-size: 2rem;
+			font-weight: 500;
+			color: #ffffff;
+			background-color: var(--color-primary);
+			border-radius: 12px;
+			text-decoration: none;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 12px rgba(141, 169, 155, 0.2);
+		}
+
+		.sponsor-button:hover {
+			background-color: #7a9587;
+			transform: translateY(-2px);
+			box-shadow: 0 6px 16px rgba(141, 169, 155, 0.3);
+		}
+
+		/* Footer */
+		footer {
+			background: #F6F0E6;
+			border-top: 1px solid var(--color-border);
+			padding: 6rem 2rem;
+			text-align: center;
+		}
+
+		.footer-content {
+			max-width: 1400px;
+			margin: 0 auto;
+		}
+
+		.footer-links {
+			display: flex;
+			justify-content: center;
+			gap: 3rem;
+			margin-bottom: 3rem;
+			flex-wrap: wrap;
+		}
+
+		.footer-links a {
+			color: var(--color-text-secondary);
+			text-decoration: none;
+			font-size: 1.5rem;
+			transition: color 0.2s;
+		}
+
+		.footer-links a:hover {
+			color: var(--color-primary);
+		}
+
+		.footer-copyright {
+			color: var(--color-text-secondary);
+			font-size: 1.4rem;
+		}
+
+		/* 響應式設計 */
+		@media (max-width: 992px) {
+			.hero {
+				min-height: auto;
+				padding: 4rem 2rem 6rem;
+			}
+
+			.hero-container {
+				grid-template-columns: 1fr;
+				gap: 4rem;
+			}
+
+			.hero-text {
+				text-align: center;
+				padding-right: 2rem;
+				order: 2;
+			}
+
+			.phone-preview {
+				order: 1;
+				justify-content: center;
+				min-height: 400px;
+			}
+
+			.phone-frame {
+				max-width: 300px;
+				margin-left: 0;
+				margin-bottom: 0;
+			}
+
+			.download-buttons {
+				justify-content: center;
+			}
+
+			.hero h1 {
+				font-size: 4.2rem;
+			}
+
+			.hero-subtitle {
+				font-size: 2rem;
+			}
+		}
+
+		@media (max-width: 768px) {
+			.hero {
+				padding: 3rem 2rem 4rem;
+			}
+
+			.hero h1 {
+				font-size: 3.6rem;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.hero h1 img {
+				width: 56px;
+				height: 56px;
+			}
+
+			.hero-subtitle {
+				font-size: 1.8rem;
+			}
+
+			.download-buttons img {
+				height: 48px;
+			}
+
+			.phone-preview {
+				min-height: 350px;
+			}
+
+			.phone-frame {
+				max-width: 260px;
+			}
+
+			.feature-section {
+				padding: 8rem 2rem;
+			}
+
+			.feature-item {
+				margin-bottom: 10rem;
+			}
+
+			.feature-item h2 {
+				font-size: 3.2rem;
+			}
+
+			.feature-item p {
+				font-size: 1.8rem;
+			}
+
+
+			.footer-links {
+				flex-direction: column;
+				gap: 2rem;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.hero h1 {
+				font-size: 3.2rem;
+			}
+
+			.hero h1 img {
+				width: 48px;
+				height: 48px;
+			}
+
+			.hero-subtitle {
+				font-size: 1.6rem;
+			}
+
+			.feature-item h2 {
+				font-size: 2.8rem;
+			}
+
+			.feature-item p {
+				font-size: 1.6rem;
+			}
+		}
+	</style>
+
+	{% include navbar-styles.html %}
+</head>
+
+<body>
+	{% include navbar.html %}
+
+	<!-- Hero Section -->
+	<section id="hero" class="hero">
+		<div class="hero-container">
+			<div class="phone-preview">
+				<div class="phone-frame">
+					<!-- 螢幕內容：影片 -->
+					<div class="phone-screen">
+						<video autoplay loop muted playsinline preload="auto">
+							<source src="{{ '/assets/demo.mp4' | relative_url }}" type="video/mp4">
+						</video>
+					</div>
+				</div>
+			</div>
+
+			<div class="hero-text">
+				<h1>
+					<img src="{{ '/icon/180.png' | relative_url }}" alt="Logo">
+					<span>{{ site.app_name }}</span>
+				</h1>
+				<p class="hero-subtitle">{{ site.app_description }}</p>
+
+				<div class="download-buttons">
+					{% if site.playstore_link %}
+					<a href="{{ site.playstore_link }}" target="_blank">
+						<img src="{{ '/assets/playstore.png' | relative_url }}" alt="Google Play 下載">
+					</a>
+					{% endif %}
+					<a href="{{ site.appstore_link }}" target="_blank">
+						<img src="{{ '/assets/appstore.png' | relative_url }}" alt="App Store 下載">
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- 功能特色 - Apple 風格單欄式 -->
+	<section id="features" class="feature-section">
+		<!-- 功能 1 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>多種書寫系統</h2>
+				<p>支援漢字、白話字 (POJ) 和台羅拼音 (Tâi-lô)，讓你用最熟悉的方式輸入台語</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/iphone_photo/Group 1.png' | relative_url }}" alt="多種書寫系統">
+			</div>
+		</div>
+
+		<!-- 功能 2 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>智能輸入</h2>
+				<p>智能選字建議和常用詞快速輸入，讓打字更流暢、更有效率</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/iphone_photo/Group 2.png' | relative_url }}" alt="智能輸入">
+			</div>
+		</div>
+
+		<!-- 功能 3 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>客製化主題</h2>
+				<p>多種鍵盤主題和配置選項，打造專屬於你的台語輸入體驗</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/android_photo/Group 1.png' | relative_url }}" alt="客製化主題">
+			</div>
+		</div>
+
+		<!-- 功能 4 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>跨平台支援</h2>
+				<p>iOS 和 Android 完整支援，無論使用什麼裝置都能流暢輸入台語</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/android_photo/Group 2.png' | relative_url }}" alt="跨平台支援">
+			</div>
+		</div>
+	</section>
+
+	<!-- 如何使用 - Apple 風格單欄式 -->
+	<section id="how-to-use" class="feature-section">
+		<!-- 使用步驟 1 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>下載安裝</h2>
+				<p>從 App Store 或 Google Play 下載台語齒盤，開始你的台語輸入之旅</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/iphone_photo/Group 1.png' | relative_url }}" alt="下載安裝">
+			</div>
+		</div>
+
+		<!-- 使用步驟 2 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>啟用鍵盤</h2>
+				<p>在系統設定中啟用台語齒盤，設定為你的預設輸入法</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/iphone_photo/Group 2.png' | relative_url }}" alt="啟用鍵盤">
+			</div>
+		</div>
+
+		<!-- 使用步驟 3 -->
+		<div class="feature-item">
+			<div class="feature-content">
+				<h2>開始輸入</h2>
+				<p>選擇你喜歡的輸入方式，開始流暢地輸入台語</p>
+			</div>
+			<div class="feature-image">
+				<img src="{{ '/android_photo/Group 1.png' | relative_url }}" alt="開始輸入">
+			</div>
+		</div>
+	</section>
+
+	<!-- 問題回報 -->
+	<section id="issues" class="feature-section" style="padding: 8rem 2rem;">
+		<div class="feature-item" style="margin-bottom: 0;">
+			<div class="feature-content">
+				<h2>問題回報</h2>
+				<p>遇到問題或有建議嗎？歡迎透過表單回報，我們會盡快處理並改善。</p>
+			</div>
+			<a href="https://docs.google.com/forms/d/e/1FAIpQLSd7PEppQ9MdAptvoY-PaaXDlbbL9Gq9Y4lFjgU9sLz4ENiPoA/viewform"
+				target="_blank" class="sponsor-button">填寫問題回報表單</a>
+		</div>
+	</section>
+
+	<!-- 贊助支持 -->
+	<section id="sponsor" class="feature-section" style="padding: 8rem 2rem;">
+		<div class="feature-item" style="margin-bottom: 0;">
+			<div class="feature-content">
+				<h2>贊助支持</h2>
+				<p>感謝你願意支持台語齒盤的開發！你的贊助將幫助我們持續改進，讓台語輸入更加便利。</p>
+			</div>
+			<a href="https://portaly.cc/siansiansu/support" target="_blank" class="sponsor-button">前往贊助頁面</a>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer>
+		<div class="footer-content">
+			<div class="footer-links">
+				<a href="#features">功能特色</a>
+				<a href="#how-to-use">如何使用</a>
+				<a href="#issues">問題回報</a>
+				<a href="#sponsor">贊助</a>
+				<a href="/privacypolicy.html">隱私政策</a>
+			</div>
+			<p class="footer-copyright">&copy; {{ 'now' | date: "%Y" }} {{ site.app_name }}. All rights reserved.</p>
+		</div>
+	</footer>
+</body>
+
+</html>
