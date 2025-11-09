@@ -9,7 +9,8 @@
       "WebFetch(domain:portaly.cc)",
       "Bash(fd:*)",
       "Bash(identify:*)",
-      "Bash(sips -g all:*)"
+      "Bash(sips -g all:*)",
+      "Bash(mkdir:*)"
     ],
     "deny": [],
     "ask": []
