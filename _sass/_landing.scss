@@ -152,6 +152,14 @@ section {
 	margin: 0 auto;
 }
 
+.section-divider {
+	max-width: 800px;
+	margin: 0 auto;
+	border: none;
+	height: 1px;
+	background: linear-gradient(to right, transparent, var(--color-border), transparent);
+}
+
 .section-title {
 	font-size: 4.8rem;
 	font-weight: 500;
@@ -369,6 +377,10 @@ footer {
 }
 
 @media (max-width: 768px) {
+	.section-divider {
+		max-width: 600px;
+	}
+
 	.section-title {
 		font-size: 3.6rem;
 		margin-bottom: 4rem;
