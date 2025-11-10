@@ -30,16 +30,16 @@ enable_smart_app_banner                   : true                                
 
 
 # Information About Yourself
-your_name                                 :
+your_name                                 : Bîn-hiân
 your_link                                 :
 your_city                                 :
-email_address                             :
+email_address                             : minsiansu@gmail.com
 linkedin_username                         : siansiansu
 linkedin_company                          :
 facebook_username                         :
-instagram_username                        :
+instagram_username                        : siansiansu
 twitter_username                          :
-github_username                           :
+github_username                           : siansiansu
 youtube_username                          :
 mastodon_link                             :
 
@@ -48,23 +48,23 @@ mastodon_link                             :
 # Feature List
 features                                  :
 
-  - title                                 : 多種書寫系統支援
-    description                           : 支援漢字、白話字 (POJ) 佮台羅拼音 (Tâi-lô)，予你用家己慣勢的方式來輸入台語
+  - title                                 : 支持白話字佮台羅
+    description                           : 予你用家己慣勢的方式來拍台語
 
-  - title                                 : 智能輸入
-    description                           : 智能選字建議，常用詞快速輸入，閣有自訂詞庫功能，予輸入愈來愈順手
+  - title                                 : Emoji 齒盤
+    description                           : 拍字閣加趣味，表情隨你選
 
-  - title                                 : 客製化設定
-    description                           : 鍵盤配置、字體大小攏會當家己調整，予你用甲上趁手
+  - title                                 : PhahTaigi 佈局
+    description                           : 專為拍台語設計，簡單好用
 
-  - title                                 : 跨平台支援
-    description                           : 支援 iOS 佮 iPadOS，閣有深色模式，隨時隨地攏好用
+  - title                                 : Open 粉圓字骨
+    description                           : 支援 iOS、iPadOS，閣有暗色模式，隨時隨地攏方便
 
-  - title                                 : 開源專案
-    description                           : 開源授權，透明公開，歡迎社群共同參與開發佮改善
+  - title                                 : 家己寫的拍字演算法
+    description                           : 打字較聰明，揣字更準確
 
   - title                                 : 隱私保護
-    description                           : 完全無收集任何個人資料，輸入的內容攏佇你的設備內底，保障隱私
+    description                           : 資料攏留佇你 ê 設備內，完全無收集個人資訊
 
 
 
