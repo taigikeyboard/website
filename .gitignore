@@ -3,3 +3,4 @@
 _site
 Gemfile.lock
 automatic-app-landing-page
+.DS_Store
