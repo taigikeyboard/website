@@ -48,35 +48,23 @@ mastodon_link                             :
 # Feature List
 features                                  :
 
-  - title                                 : 支持白話字佮台羅
+  - title                                 : 支援白話字、台羅佮漢字
     description                           : 予你用家己慣勢的方式來拍台語
 
-  - title                                 : Emoji 齒盤
+  - title                                 : 方便切換 Emoji 齒盤
     description                           : 拍字閣加趣味，表情隨你選
 
-  - title                                 : PhahTaigi 佈局
-    description                           : 專為拍台語設計，簡單好用
+  - title                                 : 支援 PhahTaigi 佈局
+    description                           : 有預設 QWERTY 佈局佮 PhahTaigi 佈局會當選
 
-  - title                                 : Open 粉圓字骨
-    description                           : 支援 iOS、iPadOS，閣有暗色模式，隨時隨地攏方便
+  - title                                 : 支援 Open 粉圓字骨
+    description                           : 有系統字骨佮台語字骨會當選
 
-  - title                                 : 家己寫的拍字演算法
-    description                           : 打字較聰明，揣字更準確
+  - title                                 : 台灣開發 ê 拍字演算法
+    description                           : 專為台語設計，無用中國人開發的拍字 ia̋n-jín
 
   - title                                 : 隱私保護
-    description                           : 資料攏留佇你 ê 設備內，完全無收集個人資訊
-
-
-
-
-
-
-
-
-
-
-
-
+    description                           : 資料攏留佇你 ê 手機仔內底，無偷偷收你的資料
 
 ####################################################
 ### Jekyll Configuration. No need to touch this. ###
