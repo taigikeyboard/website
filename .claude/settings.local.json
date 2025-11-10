@@ -15,7 +15,9 @@
       "Bash(sips:*)",
       "Bash(pngquant:*)",
       "Bash(rm:*)",
-      "Bash(rmdir:*)"
+      "Bash(rmdir:*)",
+      "WebFetch(domain:garbagetruck.tw)",
+      "WebFetch(domain:www.termsfeed.com)"
     ],
     "deny": [],
     "ask": []

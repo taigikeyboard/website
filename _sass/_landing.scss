@@ -397,6 +397,83 @@ section {
 	margin-bottom: 0;
 }
 
+.download-section {
+	max-width: 800px;
+	margin: 0 auto;
+	text-align: center;
+	padding: 4rem 2rem;
+}
+
+.download-title {
+	font-size: 4.2rem;
+	font-weight: 600;
+	color: var(--color-text-primary);
+	margin-bottom: 1.5rem;
+	line-height: 1.2;
+}
+
+.download-subtitle {
+	font-size: 2rem;
+	color: var(--color-text-secondary);
+	margin-bottom: 4rem;
+	line-height: 1.5;
+}
+
+.download-buttons {
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+	margin-bottom: 4rem;
+	flex-wrap: wrap;
+}
+
+.store-badge {
+	transition: transform 0.2s;
+	display: block;
+}
+
+.store-badge:hover {
+	transform: translateY(-2px);
+}
+
+.store-badge img {
+	height: 56px;
+}
+
+.download-features-container {
+	max-width: 500px;
+	margin: 0 auto;
+	padding: 3rem;
+	background-color: var(--color-surface);
+	border-radius: 10px;
+	border: 1px solid var(--color-border);
+}
+
+.download-feature {
+	display: flex;
+	align-items: center;
+	gap: 1.2rem;
+	margin-bottom: 1.5rem;
+	text-align: left;
+}
+
+.download-feature:last-child {
+	margin-bottom: 0;
+}
+
+.feature-check {
+	font-size: 2rem;
+	color: var(--color-primary);
+	font-weight: 700;
+	flex-shrink: 0;
+}
+
+.download-feature span:not(.feature-check) {
+	font-size: 1.7rem;
+	color: var(--color-text-primary);
+	line-height: 1.5;
+}
+
 .sponsor-button {
 	display: inline-block;
 	padding: 1.8rem 4rem;
@@ -560,6 +637,19 @@ footer {
 	.hero-subtitle {
 		font-size: 2rem;
 	}
+
+	.download-title {
+		font-size: 3.6rem;
+	}
+
+	.download-subtitle {
+		font-size: 1.8rem;
+		margin-bottom: 3rem;
+	}
+
+	.download-features-container {
+		padding: 2.5rem;
+	}
 }
 
 @media (max-width: 768px) {
@@ -677,6 +767,26 @@ footer {
 		font-size: 1.8rem;
 	}
 
+	.download-title {
+		font-size: 3.2rem;
+	}
+
+	.download-subtitle {
+		font-size: 1.7rem;
+		margin-bottom: 2.5rem;
+	}
+
+	.download-features-container {
+		padding: 2rem;
+	}
+
+	.download-feature span:not(.feature-check) {
+		font-size: 1.6rem;
+	}
+
+	.store-badge img {
+		height: 48px;
+	}
 
 	.footer-links {
 		flex-direction: column;
@@ -708,6 +818,23 @@ footer {
 
 	.feature-item p {
 		font-size: 1.6rem;
+	}
+
+	.download-title {
+		font-size: 2.8rem;
+	}
+
+	.download-subtitle {
+		font-size: 1.6rem;
+		margin-bottom: 2rem;
+	}
+
+	.download-features-container {
+		padding: 1.5rem;
+	}
+
+	.download-feature span:not(.feature-check) {
+		font-size: 1.5rem;
 	}
 }
 
