@@ -1,0 +1,11 @@
+---
+# Front matter comment to ensure Jekyll properly reads file.
+---
+
+$body-color: #ffffff;
+$phone-frame-image: "{{ '/assets/black.png' | relative_url }}";
+
+@import
+    "base",
+    "landing",
+    "navbar";

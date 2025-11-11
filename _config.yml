@@ -1,0 +1,120 @@
+#page title
+page_title                                :                                           # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+
+# App Info
+ios_app_id                                : 6751871806                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
+ios_app_country                           : TW                                        # Required outside USA. Enter 2 letter country code as in https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
+
+appstore_link                             : https://apps.apple.com/app/id6751871806  # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
+playstore_link                            : https://play.google.com/store/apps/details?id=com.siansiansu.taigikeyboard          # Enter Google Play Store URL.
+presskit_download_link                    :                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file).
+                                                                                      # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
+
+app_name                                  : 台語齒盤 - 台語輸入法
+app_description                           : 專為台語使用者設計的手機仔齒盤
+
+lang: zh-TW
+
+# Navigation & Section Labels
+nav_labels:
+  features                                : 功能特色
+  screenshots                             : 齒盤外觀
+  how_to_type                             : 按怎拍字
+  how_to_use                              : 按怎啟用
+  issues                                  : 問題回報
+  sponsor                                 : 贊助支持
+  privacy_policy                          : 隱私政策
+
+enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
+
+
+
+# Information About Yourself
+your_name                                 : Bîn-hiân
+your_link                                 :
+your_city                                 :
+email_address                             : minsiansu@gmail.com
+linkedin_username                         : minsian
+linkedin_company                          :
+facebook_username                         :
+instagram_username                        : siansiansu
+twitter_username                          :
+github_username                           : siansiansu
+youtube_username                          :
+mastodon_link                             :
+
+
+
+# Feature List
+features                                  :
+
+  - title                                 : 支持白話字、台羅佮漢字
+    description                           : 予你用家己慣勢的方式來拍台語
+
+  - title                                 : 方便切換 Emoji 齒盤
+    description                           : 拍字兼拍表情，加添拍字的趣味
+
+  - title                                 : 支持 PhahTaigi 佈局
+    description                           : 利便習慣 PhahTaigi 齒盤的使用者
+
+  - title                                 : 支持 Open 粉圓字骨
+    description                           : 正港台語字骨，罕得的字嘛方便看
+
+  - title                                 : 台灣人寫的 ê 拍字演算法
+    description                           : 專為台語設計，無用中國人寫的拍字 ia̋n-jín
+
+  - title                                 : 保護你的資料
+    description                           : 資料攏留佇你 ê 手機仔內底，無收你的資料
+
+  - title                                 : 定期加入上新的詞庫
+    description                           : 台語新詞嘛攏揣有
+
+  - title                                 : 定期升級維護 APP
+    description                           : 改進使用體驗，修理資安破空
+
+  - title                                 : 支持台語教育使用
+    description                           : 免錢、無廣告、袂做付費功能
+
+
+
+####################################################
+### Jekyll Configuration. No need to touch this. ###
+####################################################
+
+# Set the Sass partials directory, as we're using @imports
+sass:
+  style: compressed
+  sourcemap: never
+
+# Exclude these files from your production _site
+exclude:
+  - LICENSE
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - .bundle
+
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
+# Markdown rendering
+markdown: kramdown
+
+# Site info for SEO
+title: "台語齒盤"
+description: "台語齒盤是專為台語使用者設計的手機仔台語輸入法，支持白話字、台羅佮漢字，內底有誠豐富的詞庫，嘛有 PhahTaigi 佈局、台語專用字骨會當選。"
+url: "https://taigikeyboard.tw"
+author: "Bîn-hiân"
+
+# Social sharing image
+logo: "/icon/180.png"  # Used by jekyll-seo-tag for og:image
+twitter:
+  card: summary_large_image
+
+# Plugins
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
