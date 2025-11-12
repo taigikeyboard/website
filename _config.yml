@@ -104,7 +104,7 @@ collections:
 markdown: kramdown
 
 # Site info for SEO
-title: "台語齒盤"
+title: "台語齒盤 - 台語輸入法"
 description: "台語齒盤是專為台語使用者設計的手機仔台語輸入法，支持白話字、台羅佮漢字，內底有誠豐富的詞庫，嘛有 PhahTaigi 佈局、台語專用字骨會當選。"
 url: "https://taigikeyboard.tw"
 author: "Bîn-hiân"
