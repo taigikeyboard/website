@@ -6,6 +6,15 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+	<!-- Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9C1QYSMJGZ"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-9C1QYSMJGZ');
+	</script>
+
 	<title>{{ site.app_name }} - {{ site.app_description }}</title>
 	<meta name="description" content="{{ site.description }}">
 	<meta name="keywords"
@@ -93,11 +102,11 @@
 
 				<div id="download" class="download-buttons">
 					{% if site.playstore_link %}
-					<a href="{{ site.playstore_link }}" target="_blank">
+					<a href="{{ site.playstore_link }}" target="_blank" rel="noopener noreferrer">
 						<img src="{{ '/assets/playstore.png' | relative_url }}" alt="Google Play 下載">
 					</a>
 					{% endif %}
-					<a href="{{ site.appstore_link }}" target="_blank">
+					<a href="{{ site.appstore_link }}" target="_blank" rel="noopener noreferrer">
 						<img src="{{ '/assets/appstore.png' | relative_url }}" alt="App Store 下載">
 					</a>
 				</div>
@@ -134,15 +143,19 @@
 			<div class="screenshot-item">
 				<h3 class="screenshot-title" style="font-weight: 700;">Android</h3>
 				<div class="screenshot-image">
-					<img src="{{ '/assets/android.png' | relative_url }}" alt="Android 台語齒盤外觀" width="750" height="1624"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/android.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/android.png' | relative_url }}" alt="Android 台語齒盤外觀" width="750" height="1624" loading="lazy">
+						</picture>
 				</div>
 			</div>
 			<div class="screenshot-item">
 				<h3 class="screenshot-title" style="font-weight: 700;">iPhone</h3>
 				<div class="screenshot-image">
-					<img src="{{ '/assets/iphone.png' | relative_url }}" alt="iPhone 台語齒盤外觀" width="750" height="1624"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/iphone.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/iphone.png' | relative_url }}" alt="iPhone 台語齒盤外觀" width="750" height="1624" loading="lazy">
+						</picture>
 				</div>
 			</div>
 		</div>
@@ -155,42 +168,55 @@
 			<div class="screenshot-item">
 				<h3 class="screenshot-title">Emoji 齒盤</h3>
 				<div class="screenshot-image">
-					<img src="{{ '/assets/feature-1.png' | relative_url }}" alt="台語 Emoji 齒盤" width="866" height="1792"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/feature-1.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/feature-1.png' | relative_url }}" alt="台語 Emoji 齒盤" width="866" height="1792" loading="lazy">
+						</picture>
 				</div>
 			</div>
 			<div class="screenshot-item">
 				<h3 class="screenshot-title">PhahTagi 佈局</h3>
 				<div class="screenshot-image">
-					<img src="{{ '/assets/feature-2.png' | relative_url }}" alt="PhahTaigi 鍵盤佈局" width="866" height="1792"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/feature-2.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/feature-2.png' | relative_url }}" alt="PhahTaigi 鍵盤佈局" width="866" height="1792" loading="lazy">
+						</picture>
 				</div>
 			</div>
 			<div class="screenshot-item">
 				<h3 class="screenshot-title">齒盤設定</h3>
 				<div class="screenshot-image">
-					<img src="{{ '/assets/feature-3.png' | relative_url }}" alt="台語齒盤設定介面" width="866" height="1792"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/feature-3.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/feature-3.png' | relative_url }}" alt="台語齒盤設定介面" width="866" height="1792" loading="lazy">
+						</picture>
 				</div>
 			</div>
 			<div class="screenshot-item">
 				<h3 class="screenshot-title">Open 粉圓字骨</h3>
 				<div class="screenshot-image">
-					<img src="{{ '/assets/feature-4.png' | relative_url }}" alt="Open 粉圓字型顯示" width="866" height="1792"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/feature-4.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/feature-4.png' | relative_url }}" alt="Open 粉圓字型顯示" width="866" height="1792" loading="lazy">
+						</picture>
 				</div>
 			</div>
 			<div class="screenshot-item">
 				<h3 class="screenshot-title">全羅模式</h3>
 				<div class="screenshot-image">
-					<img src="{{ '/assets/feature-5.png' | relative_url }}" alt="全羅拼音輸入模式" width="866" height="1792"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/feature-5.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/feature-5.png' | relative_url }}" alt="全羅拼音輸入模式" width="866" height="1792" loading="lazy">
+						</picture>
 				</div>
 			</div>
 			<div class="screenshot-item">
 				<h3 class="screenshot-title">暗色模式</h3>
 				<div class="screenshot-image">
-					<img src="{{ '/assets/feature-6.png' | relative_url }}" alt="暗色主題模式" width="866" height="1792" loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/feature-6.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/feature-6.png' | relative_url }}" alt="暗色主題模式" width="866" height="1792" loading="lazy">
+						</picture>
 				</div>
 			</div>
 		</div>
@@ -204,12 +230,16 @@
 		<p class="section-note">若拍漢字，會自動使用全形標點符號，拍羅馬字會自動切去半形標點符號，建議的候選詞會顯示佇頂頭，嘛會使褫開看較清楚</p>
 		<div class="keyboard-layout">
 			<div class="keyboard-layout-image">
-				<img src="{{ '/assets/keyboard-layout-1.png' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144"
-					loading="lazy">
+				<picture>
+						<source srcset="{{ '/assets/keyboard-layout-1.webp' | relative_url }}" type="image/webp">
+						<img src="{{ '/assets/keyboard-layout-1.png' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144" loading="lazy">
+					</picture>
 				<hr class="section-divider-inner">
 				<p class="section-note">點入去齒盤 APP 內底，會看著【齒盤設定】，依你的拍字習慣調整</p>
-				<img src="{{ '/assets/keyboard-layout-2.png' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144"
-					loading="lazy">
+				<picture>
+						<source srcset="{{ '/assets/keyboard-layout-2.webp' | relative_url }}" type="image/webp">
+						<img src="{{ '/assets/keyboard-layout-2.png' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144" loading="lazy">
+					</picture>
 
 				<hr class="section-divider-inner">
 
@@ -219,23 +249,29 @@
 					<div class="screenshot-item">
 						<h3 class="screenshot-title" style="font-weight: 700;">標準佈局 (Lohankha 齒盤)</h3>
 						<div class="screenshot-image">
-							<img src="{{ '/assets/qwerty-layout.png' | relative_url }}" alt="標準佈局 Lohankha 齒盤" width="450"
-								height="931" loading="lazy">
+							<picture>
+									<source srcset="{{ '/assets/qwerty-layout.webp' | relative_url }}" type="image/webp">
+									<img src="{{ '/assets/qwerty-layout.png' | relative_url }}" alt="標準佈局 Lohankha 齒盤" width="450" height="931" loading="lazy">
+								</picture>
 						</div>
 					</div>
 					<div class="screenshot-item">
 						<h3 class="screenshot-title" style="font-weight: 700;">PhahTaigi 佈局</h3>
 						<div class="screenshot-image">
-							<img src="{{ '/assets/phahtaigi-layout.png' | relative_url }}" alt="PhahTaigi 佈局" width="450" height="931"
-								loading="lazy">
+							<picture>
+									<source srcset="{{ '/assets/phahtaigi-layout.webp' | relative_url }}" type="image/webp">
+									<img src="{{ '/assets/phahtaigi-layout.png' | relative_url }}" alt="PhahTaigi 佈局" width="450" height="931" loading="lazy">
+								</picture>
 						</div>
 					</div>
 				</div>
 
 				<hr class="section-divider-inner">
 
-				<img src="{{ '/assets/keyboard-layout-3.png' | relative_url }}" alt="台語齒盤拍字範例" width="2048" height="1144"
-					loading="lazy">
+				<picture>
+						<source srcset="{{ '/assets/keyboard-layout-3.webp' | relative_url }}" type="image/webp">
+						<img src="{{ '/assets/keyboard-layout-3.png' | relative_url }}" alt="台語齒盤拍字範例" width="2048" height="1144" loading="lazy">
+					</picture>
 			</div>
 		</div>
 	</section>
@@ -249,24 +285,30 @@
 			<div class="setup-step">
 				<div class="step-number">1</div>
 				<div class="step-image">
-					<img src="{{ '/assets/setup-1.png' | relative_url }}" alt="台語齒盤設定步驟一：進入系統設定" width="500" height="1034"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/setup-1.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/setup-1.png' | relative_url }}" alt="台語齒盤設定步驟一：進入系統設定" width="500" height="1034" loading="lazy">
+						</picture>
 				</div>
 				<p class="step-description">去【設定】>【一般/系統】>【齒盤】</p>
 			</div>
 			<div class="setup-step">
 				<div class="step-number">2</div>
 				<div class="step-image">
-					<img src="{{ '/assets/setup-2.png' | relative_url }}" alt="台語齒盤設定步驟二：加入鍵盤" width="500" height="1034"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/setup-2.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/setup-2.png' | relative_url }}" alt="台語齒盤設定步驟二：加入鍵盤" width="500" height="1034" loading="lazy">
+						</picture>
 				</div>
 				<p class="step-description">點【齒盤】>【加入台語齒盤】</p>
 			</div>
 			<div class="setup-step">
 				<div class="step-number">3</div>
 				<div class="step-image">
-					<img src="{{ '/assets/setup-3.png' | relative_url }}" alt="台語齒盤設定步驟三：開始使用" width="500" height="1034"
-						loading="lazy">
+					<picture>
+							<source srcset="{{ '/assets/setup-3.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/setup-3.png' | relative_url }}" alt="台語齒盤設定步驟三：開始使用" width="500" height="1034" loading="lazy">
+						</picture>
 				</div>
 				<p class="step-description">選【台語齒盤】開始使用</p>
 			</div>
@@ -287,7 +329,7 @@
 				<h2>{{ site.nav_labels.sponsor }}</h2>
 				<p>感謝支持台語齒盤！台語齒盤是一人團隊，由我一个人塌錢開發佮維護，因為有你的贊助，予我有氣力繼續行落去，咱做伙為著台語打拼</p>
 			</div>
-			<a href="https://portaly.cc/siansiansu/support" target="_blank" class="sponsor-button">去贊助頁面</a>
+			<a href="https://portaly.cc/siansiansu/support" target="_blank" rel="noopener noreferrer" class="sponsor-button">去贊助頁面</a>
 		</div>
 	</section>
 
@@ -307,35 +349,35 @@
 			site.facebook_username or site.instagram_username or site.mastodon_link %}
 			<div class="footer-social">
 				{% if site.linkedin_username %}
-				<a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener"
+				<a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank" rel="noopener noreferrer"
 					aria-label="LinkedIn">
 					<i class="fab fa-linkedin"></i>
 				</a>
 				{% endif %}
 				{% if site.github_username %}
-				<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener" aria-label="GitHub">
+				<a href="https://github.com/{{ site.github_username }}" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
 					<i class="fab fa-github"></i>
 				</a>
 				{% endif %}
 				{% if site.twitter_username %}
-				<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener" aria-label="Twitter">
+				<a href="https://twitter.com/{{ site.twitter_username }}" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
 					<i class="fab fa-twitter"></i>
 				</a>
 				{% endif %}
 				{% if site.facebook_username %}
-				<a href="https://facebook.com/{{ site.facebook_username }}" target="_blank" rel="noopener"
+				<a href="https://facebook.com/{{ site.facebook_username }}" target="_blank" rel="noopener noreferrer"
 					aria-label="Facebook">
 					<i class="fab fa-facebook"></i>
 				</a>
 				{% endif %}
 				{% if site.instagram_username %}
-				<a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" rel="noopener"
+				<a href="https://instagram.com/{{ site.instagram_username }}" target="_blank" rel="noopener noreferrer"
 					aria-label="Instagram">
 					<i class="fab fa-instagram"></i>
 				</a>
 				{% endif %}
 				{% if site.mastodon_link %}
-				<a href="{{ site.mastodon_link }}" target="_blank" rel="me noopener" aria-label="Mastodon">
+				<a href="{{ site.mastodon_link }}" target="_blank" rel="me noopener noreferrer" aria-label="Mastodon">
 					<i class="fab fa-mastodon"></i>
 				</a>
 				{% endif %}
@@ -349,7 +391,7 @@
 
 			{% if site.your_name %}
 			<p class="footer-author">Made by {% if site.your_link %}<a href="{{ site.your_link }}" target="_blank"
-					rel="noopener">{% endif %}{{ site.your_name }}{% if site.your_link %}</a>{% endif %}{% if site.your_city %} in
+					rel="noopener noreferrer">{% endif %}{{ site.your_name }}{% if site.your_link %}</a>{% endif %}{% if site.your_city %} in
 				{{ site.your_city }}{% endif %}</p>
 			{% endif %}
 
