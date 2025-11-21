@@ -64,22 +64,20 @@ body {
 	padding: 2rem 0;
 }
 
-.hero h1 {
-	font-size: 5.4rem;
-	font-weight: 500;
-	line-height: 1.08;
-	margin-bottom: 2.4rem;
-	color: var(--color-text-primary);
-	letter-spacing: -0.015em;
-	display: flex;
-	align-items: center;
-	gap: 2rem;
-}
-
-.hero h1 img {
+.hero-logo {
 	width: 68px;
 	height: 68px;
 	border-radius: 13px;
+	margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+	font-size: 4.2rem;
+	font-weight: 500;
+	line-height: 1.2;
+	margin-bottom: 2.4rem;
+	color: var(--color-text-primary);
+	letter-spacing: -0.015em;
 }
 
 .hero-subtitle {
@@ -188,6 +186,27 @@ section {
 	color: var(--color-text-secondary);
 	margin-bottom: 4rem;
 	margin-top: 0;
+}
+
+.about-section {
+	padding: 8rem 2rem;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.about-content {
+	text-align: left;
+}
+
+.about-content p {
+	font-size: var(--font-size-body);
+	color: var(--color-text-secondary);
+	line-height: 1.8;
+	margin-bottom: 2rem;
+}
+
+.about-content p:last-child {
+	margin-bottom: 0;
 }
 
 .features-grid-section {
@@ -319,14 +338,24 @@ section {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	margin: 0;
 }
 
 .screenshot-title {
 	font-size: 1.8rem;
-	font-weight: 500;
+	font-weight: 700;
 	color: var(--color-text-primary);
-	margin-bottom: 1.5rem;
+	margin-top: 1.5rem;
+	margin-bottom: 0;
 	text-align: center;
+}
+
+figure.screenshot-item .screenshot-image {
+	order: 1;
+}
+
+figure.screenshot-item figcaption {
+	order: 2;
 }
 
 .screenshot-image {
@@ -691,7 +720,12 @@ footer {
 	}
 
 	.hero h1 {
-		font-size: 4.2rem;
+		font-size: 3.6rem;
+	}
+
+	.hero-logo {
+		width: 56px;
+		height: 56px;
 	}
 
 	.hero-subtitle {
@@ -784,14 +818,12 @@ footer {
 	}
 
 	.hero h1 {
-		font-size: 3.6rem;
-		flex-direction: column;
-		gap: 1.5rem;
+		font-size: 2.8rem;
 	}
 
-	.hero h1 img {
-		width: 56px;
-		height: 56px;
+	.hero-logo {
+		width: 48px;
+		height: 48px;
 	}
 
 	.hero-subtitle {
@@ -871,12 +903,12 @@ footer {
 
 @media (max-width: 480px) {
 	.hero h1 {
-		font-size: 3.2rem;
+		font-size: 2.4rem;
 	}
 
-	.hero h1 img {
-		width: 48px;
-		height: 48px;
+	.hero-logo {
+		width: 40px;
+		height: 40px;
 	}
 
 	.hero-subtitle {
