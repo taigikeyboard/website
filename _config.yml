@@ -48,25 +48,25 @@ mastodon_link                             :
 # Feature List
 features                                  :
 
-  - title                                 : 支持白話字、台羅佮漢字
+  - title                                 : 支持白話字、台羅 kap 漢字
     description                           : 予你用家己慣勢的方式來拍台語
 
   - title                                 : 方便切換 Emoji 齒盤
     description                           : 拍字兼拍表情，加添拍字的趣味
 
   - title                                 : 支持 PhahTaigi 佈局
-    description                           : 利便習慣 PhahTaigi 齒盤的使用者
+    description                           : 利便習慣 PhahTaigi 齒盤 ê 使用者
 
   - title                                 : 支持 Open 粉圓字骨
-    description                           : 正港台語字骨，罕得的字嘛方便看
+    description                           : 正港台語字骨，罕得 ê 字嘛方便看
 
-  - title                                 : 台灣人寫的 ê 拍字演算法
-    description                           : 專為台語設計，無用中國人寫的拍字 ia̋n-jín
+  - title                                 : 台灣人寫 ê 拍字演算法
+    description                           : 專為台語設計，無用中国人寫 ê 拍字 ia̋n-jín
 
-  - title                                 : 保護你的資料
-    description                           : 資料攏留佇你 ê 手機仔內底，無收你的資料
+  - title                                 : 保護你 ê 資料
+    description                           : 資料攏留佇你 ê 手機仔內底，無收你 ê 資料
 
-  - title                                 : 定期加入上新的詞庫
+  - title                                 : 定期加入上新 ê 詞庫
     description                           : 台語新詞嘛攏揣有
 
   - title                                 : 定期升級維護 APP
