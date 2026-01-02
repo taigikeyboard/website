@@ -1,92 +1,196 @@
-#page title
-page_title                                :                                           # Automatically populates with app name if not set and if iOS app ID is set. Otherwise enter manually.
+# =============================================================================
+# Site Configuration
+# =============================================================================
 
-# App Info
-ios_app_id                                : 6751871806                                # Required. Enter iOS app ID to automatically populate name, price and icons (e.g. 718043190).
-ios_app_country                           : TW                                        # Required outside USA. Enter 2 letter country code as in https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2
-
-appstore_link                             : https://apps.apple.com/app/id6751871806  # Automatically populates if not set and if iOS app ID is set. Otherwise enter manually.
-playstore_link                            : https://play.google.com/store/apps/details?id=com.siansiansu.taigikeyboard          # Enter Google Play Store URL.
-presskit_download_link                    :                                          # Enter a link to downloadable file or (e.g. public Dropbox link to a .zip file).
-                                                                                      # Or upload your press kit file to assets and set path accordingly (e.g. "assets/your_press_kit.zip").
-
-app_name                                  : 台語齒盤 - 台語輸入法
-app_description                           : 台語輸入法
-
+title: 台語齒盤 - 台語輸入法
+description: 台語齒盤是專為台語使用者設計 ê 手機仔拍字家私，支持 iOS 佮 Android 2 種系統。無論你習慣用白話字、教育部台羅，抑是直接拍出漢字，台語齒盤攏會當滿足你 ê 需要。
+url: https://taigikeyboard.tw
 lang: zh-TW
+author: Bîn-hiân
 
-# Navigation & Section Labels
+# =============================================================================
+# App Information
+# =============================================================================
+
+app_name: 台語齒盤 - 台語輸入法
+app_description: 台語輸入法
+
+ios_app_id: 6751871806
+ios_app_country: TW
+appstore_link: https://apps.apple.com/app/id6751871806
+playstore_link: https://play.google.com/store/apps/details?id=com.siansiansu.taigikeyboard
+
+enable_smart_app_banner: true
+
+# =============================================================================
+# Analytics
+# =============================================================================
+
+google_analytics_id: G-9C1QYSMJGZ
+
+# =============================================================================
+# SEO
+# =============================================================================
+
+keywords: 台語, 臺語, 台文, 台語輸入法, 台語鍵盤, 台語齒盤, 台羅, Tâi-lô, 白話字, POJ, Pe̍h-ōe-jī, Tâi-gí, Taigi, Taiwanese, PhahTaigi, 粉圓字型, 台語APP, 台語軟體
+
+logo: /assets/icon/180.png
+twitter:
+  card: summary_large_image
+
+# =============================================================================
+# Navigation Labels
+# =============================================================================
+
 nav_labels:
-  features                                : 功能特色
-  screenshots                             : 齒盤外觀
-  how_to_type                             : 按怎拍字
-  how_to_use                              : 按怎啟用
-  issues                                  : 問題回報
-  sponsor                                 : 贊助支持
-  privacy_policy                          : 隱私政策
+  features: 功能特色
+  screenshots: 齒盤外觀
+  how_to_type: 按怎拍字
+  how_to_use: 按怎啟用
+  issues: 問題回報
+  sponsor: 贊助支持
+  privacy_policy: 隱私政策
 
-enable_smart_app_banner                   : true                                      # Set to true to show a smart app banner at top of page on mobile devices.
+# =============================================================================
+# Content - Hero Section
+# =============================================================================
 
+hero:
+  subtitle: 簡單、方便、裝了隨用 ê 台語齒盤
 
+# =============================================================================
+# Content - About Section
+# =============================================================================
 
-# Information About Yourself
-your_name                                 : Bîn-hiân
-your_link                                 :
-your_city                                 :
-email_address                             : info@taigikeyboard.tw
-linkedin_username                         : minsian
-linkedin_company                          :
-facebook_username                         :
-instagram_username                        : siansiansu
-twitter_username                          :
-github_username                           : siansiansu
-youtube_username                          :
-mastodon_link                             :
+about:
+  title: 關於台語齒盤
+  paragraphs:
+    - 台語齒盤是專為台語使用者設計 ê 手機仔拍字家私，支持 iOS 佮 Android 2 種系統。無論你習慣用白話字、教育部台羅，抑是直接拍出漢字，台語齒盤攏會當滿足你 ê 需要。
+    - 台語齒盤保證免費、無廣告，以後袂做付費功能。咱 ê 目標是 thui-sak 台語教育，予逐家輕輕鬆鬆用母語來拍字、寫文章、傳消息。
 
+# =============================================================================
+# Content - Screenshots Section
+# =============================================================================
 
+screenshots:
+  platform_note: Android 佮 iOS 手機仔的齒盤外觀有小可仔無仝，毋過使用的體驗攏仝款
+  other_screenshots_title: 其他畫面
+  items:
+    - title: Emoji 齒盤
+      image: feature-1
+      alt: 台語 Emoji 齒盤
+    - title: PhahTagi 佈局
+      image: feature-2
+      alt: PhahTaigi 鍵盤佈局
+    - title: 齒盤設定
+      image: feature-3
+      alt: 台語齒盤設定介面
+    - title: Open 粉圓字骨
+      image: feature-4
+      alt: Open 粉圓字型顯示
+    - title: 全羅模式
+      image: feature-5
+      alt: 全羅拼音輸入模式
+    - title: 暗色模式
+      image: feature-6
+      alt: 暗色主題模式
 
-# Feature List
-features                                  :
+# =============================================================================
+# Content - How to Type Section
+# =============================================================================
 
-  - title                                 : 支持白話字、台羅 kap 漢字
-    description                           : 予你用家己慣勢的方式來拍台語
+how_to_type:
+  notes:
+    - 若拍漢字，會自動使用全形標點符號，拍羅馬字會自動切去半形標點符號，建議的候選詞會顯示佇頂頭，嘛會使褫開看較清楚
+    - 點入去齒盤 APP 內底，會看著【齒盤設定】，依你的拍字習慣調整
+    - 兩種拍字佈局會當選
+  layouts:
+    - title: 標準佈局 (Lohankha 齒盤)
+      image: qwerty-layout
+      alt: 標準佈局 Lohankha 齒盤
+    - title: PhahTaigi 佈局
+      image: phahtaigi-layout
+      alt: PhahTaigi 佈局
 
-  - title                                 : 方便切換 Emoji 齒盤
-    description                           : 拍字兼拍表情，加添拍字的趣味
+# =============================================================================
+# Content - How to Use Section
+# =============================================================================
 
-  - title                                 : 支持 PhahTaigi 佈局
-    description                           : 利便習慣 PhahTaigi 齒盤 ê 使用者
+how_to_use:
+  steps:
+    - description: 去【設定】>【一般/系統】>【齒盤】
+      image: setup-1
+      alt: 台語齒盤設定步驟一：進入系統設定
+    - description: 點【齒盤】>【加入台語齒盤】
+      image: setup-2
+      alt: 台語齒盤設定步驟二：加入鍵盤
+    - description: 選【台語齒盤】開始使用
+      image: setup-3
+      alt: 台語齒盤設定步驟三：開始使用
+  notes:
+    - ※ 無仝牌子的手機仔設定可能無仝，但是啟用方法攏差不多
+    - ※ 「允准完整取用」是予齒盤會當捌你揤 ê 動作，成做你拍 ê 字，台語齒盤袂收集任何資料
 
-  - title                                 : 支持 Open 粉圓字骨
-    description                           : 正港台語字骨，罕得 ê 字嘛方便看
+# =============================================================================
+# Content - Sponsor Section
+# =============================================================================
 
-  - title                                 : 台灣人寫 ê 拍字演算法
-    description                           : 專為台語設計，無用中国人寫 ê 拍字 ia̋n-jín
+sponsor:
+  description: 感謝支持台語齒盤！台語齒盤是一人團隊，由我一个人塌錢開發佮維護，因為有你的贊助，予我有氣力繼續行落去，咱做伙為著台語打拼
+  button_text: 去贊助頁面
+  link: https://portaly.cc/siansiansu/support
 
-  - title                                 : 保護你 ê 資料
-    description                           : 資料攏留佇你 ê 手機仔內底，無收你 ê 資料
+# =============================================================================
+# Features
+# =============================================================================
 
-  - title                                 : 定期加入上新 ê 詞庫
-    description                           : 台語新詞嘛攏揣有
+features:
+  - title: 方便揤 Emoji
+    image: emoji-keyboard.webp
+    description: 台語齒盤內底寄表情齒盤，拍字兼拍表情，加添拍字 ê 趣味。
 
-  - title                                 : 定期升級維護 APP
-    description                           : 改進使用體驗，修理資安破空
+  - title: 支持白話字、台羅佮漢字
+    description: 予你用家己慣勢 ê 方式來拍台語
 
-  - title                                 : 支持台語教育使用
-    description                           : 免錢、無廣告、袂做付費功能
+  - title: 支持 PhahTaigi 佈局
+    description: 利便習慣 PhahTaigi 齒盤 ê 使用者
 
+  - title: 支持 Open 粉圓字骨
+    description: 正港台語字骨，罕得 ê 字嘛方便看
 
+  - title: 台灣人寫 ê 拍字演算法
+    description: 專為台語設計，無用中国人寫 ê 拍字 ia̋n-jín
 
-####################################################
-### Jekyll Configuration. No need to touch this. ###
-####################################################
+  - title: 保護你 ê 資料
+    description: 資料攏留佇你 ê 手機仔內底，無收你 ê 資料
 
-# Set the Sass partials directory, as we're using @imports
+  - title: 定期加入上新 ê 詞庫
+    description: 台語新詞嘛攏揣有
+
+  - title: 定期升級維護 APP
+    description: 改進使用體驗，修理資安破空
+
+  - title: 支持台語教育使用
+    description: 免錢、無廣告、袂做付費功能
+
+# =============================================================================
+# Social & Contact
+# =============================================================================
+
+your_name: Bîn-hiân
+email_address: info@taigikeyboard.tw
+linkedin_username: minsian
+instagram_username: siansiansu
+github_username: siansiansu
+
+# =============================================================================
+# Jekyll Configuration
+# =============================================================================
+
 sass:
   style: compressed
   sourcemap: never
 
-# Exclude these files from your production _site
 exclude:
   - LICENSE
   - README.md
@@ -100,21 +204,8 @@ collections:
     output: true
     permalink: /:path/
 
-# Markdown rendering
 markdown: kramdown
 
-# Site info for SEO
-title: "台語齒盤 - 台語輸入法"
-description: "台語齒盤是專為台語使用者設計的手機仔台語輸入法，支持白話字、台羅佮漢字，內底有誠豐富的詞庫，嘛有 PhahTaigi 佈局、台語專用字骨會當選。"
-url: "https://taigikeyboard.tw"
-author: "Bîn-hiân"
-
-# Social sharing image
-logo: "/assets/icon/180.png"  # Used by jekyll-seo-tag for og:image
-twitter:
-  card: summary_large_image
-
-# Plugins
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag

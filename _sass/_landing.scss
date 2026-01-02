@@ -1,20 +1,20 @@
 @font-face {
 	font-family: 'Iansui';
-	src: url('../assets/Iansui-Regular.ttf') format('truetype');
+	src: url('../assets/jf-openhuninn-2.1.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 	font-display: swap;
 }
 
 :root {
-	--color-primary: #8da99b;
-	--color-secondary: #610a10;
-	--color-accent: #fab3ad;
-	--color-bg: #F6F0E6;
-	--color-surface: #F6F0E6;
-	--color-text-primary: #2c2827;
-	--color-text-secondary: #57675c;
-	--color-border: rgba(87, 103, 92, 0.2);
+	--color-primary: #1d1d1f;
+	--color-secondary: #0071e3;
+	--color-accent: #0071e3;
+	--color-bg: #ffffff;
+	--color-surface: #fbfbfd;
+	--color-text-primary: #1d1d1f;
+	--color-text-secondary: #86868b;
+	--color-border: rgba(0, 0, 0, 0.08);
 	--font-size-body: 2.1rem;
 }
 
@@ -43,7 +43,7 @@ body {
 .hero {
 	margin-top: 60px;
 	padding: 6rem 2rem 8rem;
-	background: #F6F0E6;
+	background: #ffffff;
 	min-height: 85vh;
 	display: flex;
 	align-items: center;
@@ -232,7 +232,7 @@ section {
 
 .feature-card:hover {
 	transform: translateY(-4px);
-	box-shadow: 0 8px 24px rgba(87, 103, 92, 0.15);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
 }
 
 .feature-card-content h3 {
@@ -241,6 +241,26 @@ section {
 	color: var(--color-text-primary);
 	margin-bottom: 1.5rem;
 	line-height: 1.3;
+}
+
+.feature-card-content .feature-image {
+	margin: 2.5rem 0 2rem;
+	border-radius: 18px;
+	overflow: hidden;
+	box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08), 0 1px 3px rgba(0, 0, 0, 0.06);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card-content .feature-image:hover {
+	transform: scale(1.02);
+	box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12), 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.feature-card-content .feature-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	background-color: var(--color-surface);
 }
 
 .feature-card-content p {
@@ -300,7 +320,7 @@ section {
 }
 
 .feature-item:nth-child(even) {
-	background-color: #F6F0E6;
+	background-color: #f5f5f7;
 }
 
 .screenshots-section {
@@ -543,13 +563,13 @@ figure.screenshot-item figcaption {
 	border-radius: 12px;
 	text-decoration: none;
 	transition: all 0.3s ease;
-	box-shadow: 0 4px 12px rgba(141, 169, 155, 0.2);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .sponsor-button:hover {
-	background-color: #7a9587;
+	background-color: #424245;
 	transform: translateY(-2px);
-	box-shadow: 0 6px 16px rgba(141, 169, 155, 0.3);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
 }
 
 .issues-options {
@@ -574,12 +594,12 @@ figure.screenshot-item figcaption {
 }
 
 .email-text a:hover {
-	color: #7a9587;
+	color: #424245;
 	text-decoration: underline;
 }
 
 footer {
-	background: #F6F0E6;
+	background: #f5f5f7;
 	border-top: 1px solid var(--color-border);
 	padding: 6rem 2rem;
 	text-align: center;
@@ -624,7 +644,7 @@ footer {
 	width: 42px;
 	height: 42px;
 	border-radius: 50%;
-	background-color: rgba(87, 103, 92, 0.1);
+	background-color: rgba(0, 0, 0, 0.06);
 	color: var(--color-text-secondary);
 	text-decoration: none;
 	font-size: 1.8rem;

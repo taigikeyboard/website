@@ -7,17 +7,16 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9C1QYSMJGZ"></script>
+	<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics_id }}"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
 		gtag('js', new Date());
-		gtag('config', 'G-9C1QYSMJGZ');
+		gtag('config', '{{ site.google_analytics_id }}');
 	</script>
 
 	<title>{{ site.app_name }} - {{ site.app_description }}</title>
-	<meta name="keywords"
-		content="台語, 臺語, 台文, 台語輸入法, 台語鍵盤, 台語齒盤, 台羅, Tâi-lô, 白話字, POJ, Pe̍h-ōe-jī, Tâi-gí, Taigi, Taiwanese, PhahTaigi, 粉圓字型, 台語APP, 台語軟體">
+	<meta name="keywords" content="{{ site.keywords }}">
 
 	<link rel="icon" type="image/png" sizes="48x48" href="{{ '/assets/icon/48.png' | relative_url }}">
 	<link rel="icon" type="image/png" sizes="32x32" href="{{ '/assets/icon/32.png' | relative_url }}">
@@ -97,7 +96,7 @@
 				<!-- <img src="{{ '/assets/icon/180.png' | relative_url }}" alt="台語齒盤 Logo" class="hero-logo" width="180"
 					height="180"> -->
 				<h1>《{{ site.app_name }}》</h1>
-				<p class="hero-subtitle">專為台語使用者設計 ê 手機仔拍字家私</p>
+				<p class="hero-subtitle">{{ site.hero.subtitle }}</p>
 
 				<div id="download" class="download-buttons">
 					{% if site.playstore_link %}
@@ -116,12 +115,11 @@
 	<hr class="section-divider">
 
 	<section id="about" class="about-section">
-		<h2 class="section-title">關於台語齒盤</h2>
+		<h2 class="section-title">{{ site.about.title }}</h2>
 		<div class="about-content">
-			<p>台語齒盤是 1 款專為台語使用者設計 ê 手機仔拍字家私，支持 iOS kap Android 2 種系統。無論你習慣用白話字、教育部台羅，抑是直接拍出漢字，台語齒盤攏會當滿足你 ê 需要。</p>
-			<p>咱 ê 詞庫收錄超過幾若萬台語詞，包含平常時會用到 ê 詞、植物名，嘛有定期翻新上新 ê 台語新詞。為著保護使用者 ê 隱私，咱完全袂收集任何個人資料，予你用起來較安心。</p>
-			<p>台語齒盤支持 PhahTaigi 佈局，予慣勢這款齒盤 ê 使用者會當好勢用。嘛有 Open 粉圓字骨，較罕得 ê 台語漢字嘛會拍會出來，袂閣出現豆腐字。</p>
-			<p>台語齒盤是免費 ê、無廣告，嘛袂做付費功能。咱 ê 目標是 thui-sak 台語教育，予逐家攏會使輕輕鬆鬆用母語來拍字、寫文章、傳消息。若是你認同咱 ê 理念，歡迎贊助支持台語齒盤 ê 開發 kap 維護。</p>
+			{% for paragraph in site.about.paragraphs %}
+			<p>{{ paragraph }}</p>
+			{% endfor %}
 		</div>
 	</section>
 
@@ -135,6 +133,14 @@
 			<div class="feature-card">
 				<div class="feature-card-content">
 					<h3>{{ feature.title }}</h3>
+					{% if feature.image %}
+					<div class="feature-image">
+						<picture>
+							<source srcset="{{ '/assets/' | append: feature.image | replace: '.png', '.webp' | relative_url }}" type="image/webp">
+							<img src="{{ '/assets/' | append: feature.image | relative_url }}" alt="{{ feature.title }}" loading="lazy">
+						</picture>
+					</div>
+					{% endif %}
 					<p>{{ feature.description }}</p>
 				</div>
 			</div>
@@ -148,7 +154,7 @@
 	<section id="screenshots" class="screenshots-section">
 		<h2 class="section-title">{{ site.nav_labels.screenshots }}</h2>
 
-		<p class="section-note">Android 佮 iOS 手機仔的齒盤外觀有小可仔無仝，毋過使用的體驗攏仝款</p>
+		<p class="section-note">{{ site.screenshots.platform_note }}</p>
 
 		<div class="platform-comparison">
 			<figure class="screenshot-item">
@@ -175,69 +181,20 @@
 
 		<hr class="section-divider-inner">
 
-		<p class="subsection-title"><strong>其他畫面</strong></p>
+		<p class="subsection-title"><strong>{{ site.screenshots.other_screenshots_title }}</strong></p>
 
 		<div class="screenshots-grid">
+			{% for item in site.screenshots.items %}
 			<figure class="screenshot-item">
 				<div class="screenshot-image">
 					<picture>
-						<source srcset="{{ '/assets/feature-1.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/feature-1.png' | relative_url }}" alt="台語 Emoji 齒盤" width="866" height="1792"
-							loading="lazy">
+						<source srcset="{{ '/assets/' | append: item.image | append: '.webp' | relative_url }}" type="image/webp">
+						<img src="{{ '/assets/' | append: item.image | append: '.png' | relative_url }}" alt="{{ item.alt }}" width="866" height="1792" loading="lazy">
 					</picture>
 				</div>
-				<figcaption class="screenshot-title">Emoji 齒盤</figcaption>
+				<figcaption class="screenshot-title">{{ item.title }}</figcaption>
 			</figure>
-			<figure class="screenshot-item">
-				<div class="screenshot-image">
-					<picture>
-						<source srcset="{{ '/assets/feature-2.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/feature-2.png' | relative_url }}" alt="PhahTaigi 鍵盤佈局" width="866" height="1792"
-							loading="lazy">
-					</picture>
-				</div>
-				<figcaption class="screenshot-title">PhahTagi 佈局</figcaption>
-			</figure>
-			<figure class="screenshot-item">
-				<div class="screenshot-image">
-					<picture>
-						<source srcset="{{ '/assets/feature-3.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/feature-3.png' | relative_url }}" alt="台語齒盤設定介面" width="866" height="1792"
-							loading="lazy">
-					</picture>
-				</div>
-				<figcaption class="screenshot-title">齒盤設定</figcaption>
-			</figure>
-			<figure class="screenshot-item">
-				<div class="screenshot-image">
-					<picture>
-						<source srcset="{{ '/assets/feature-4.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/feature-4.png' | relative_url }}" alt="Open 粉圓字型顯示" width="866" height="1792"
-							loading="lazy">
-					</picture>
-				</div>
-				<figcaption class="screenshot-title">Open 粉圓字骨</figcaption>
-			</figure>
-			<figure class="screenshot-item">
-				<div class="screenshot-image">
-					<picture>
-						<source srcset="{{ '/assets/feature-5.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/feature-5.png' | relative_url }}" alt="全羅拼音輸入模式" width="866" height="1792"
-							loading="lazy">
-					</picture>
-				</div>
-				<figcaption class="screenshot-title">全羅模式</figcaption>
-			</figure>
-			<figure class="screenshot-item">
-				<div class="screenshot-image">
-					<picture>
-						<source srcset="{{ '/assets/feature-6.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/feature-6.png' | relative_url }}" alt="暗色主題模式" width="866" height="1792"
-							loading="lazy">
-					</picture>
-				</div>
-				<figcaption class="screenshot-title">暗色模式</figcaption>
-			</figure>
+			{% endfor %}
 		</div>
 
 	</section>
@@ -246,55 +203,43 @@
 
 	<section id="how-to-type" class="feature-section">
 		<h2 class="section-title">{{ site.nav_labels.how_to_type }}</h2>
-		<p class="section-note">若拍漢字，會自動使用全形標點符號，拍羅馬字會自動切去半形標點符號，建議的候選詞會顯示佇頂頭，嘛會使褫開看較清楚</p>
+		<p class="section-note">{{ site.how_to_type.notes[0] }}</p>
 		<div class="keyboard-layout">
 			<div class="keyboard-layout-image">
 				<picture>
 					<source srcset="{{ '/assets/keyboard-layout-1.webp' | relative_url }}" type="image/webp">
-					<img src="{{ '/assets/keyboard-layout-1.png' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144"
-						loading="lazy">
+					<img src="{{ '/assets/keyboard-layout-1.png' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144" loading="lazy">
 				</picture>
 				<hr class="section-divider-inner">
-				<p class="section-note">點入去齒盤 APP 內底，會看著【齒盤設定】，依你的拍字習慣調整</p>
+				<p class="section-note">{{ site.how_to_type.notes[1] }}</p>
 				<picture>
 					<source srcset="{{ '/assets/keyboard-layout-2.webp' | relative_url }}" type="image/webp">
-					<img src="{{ '/assets/keyboard-layout-2.png' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144"
-						loading="lazy">
+					<img src="{{ '/assets/keyboard-layout-2.png' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144" loading="lazy">
 				</picture>
 
 				<hr class="section-divider-inner">
 
-				<p class="section-note">兩種拍字佈局會當選</p>
+				<p class="section-note">{{ site.how_to_type.notes[2] }}</p>
 
 				<div class="platform-comparison">
+					{% for layout in site.how_to_type.layouts %}
 					<figure class="screenshot-item">
 						<div class="screenshot-image">
 							<picture>
-								<source srcset="{{ '/assets/qwerty-layout.webp' | relative_url }}" type="image/webp">
-								<img src="{{ '/assets/qwerty-layout.png' | relative_url }}" alt="標準佈局 Lohankha 齒盤" width="450"
-									height="931" loading="lazy">
+								<source srcset="{{ '/assets/' | append: layout.image | append: '.webp' | relative_url }}" type="image/webp">
+								<img src="{{ '/assets/' | append: layout.image | append: '.png' | relative_url }}" alt="{{ layout.alt }}" width="450" height="931" loading="lazy">
 							</picture>
 						</div>
-						<figcaption class="screenshot-title">標準佈局 (Lohankha 齒盤)</figcaption>
+						<figcaption class="screenshot-title">{{ layout.title }}</figcaption>
 					</figure>
-					<figure class="screenshot-item">
-						<div class="screenshot-image">
-							<picture>
-								<source srcset="{{ '/assets/phahtaigi-layout.webp' | relative_url }}" type="image/webp">
-								<img src="{{ '/assets/phahtaigi-layout.png' | relative_url }}" alt="PhahTaigi 佈局" width="450"
-									height="931" loading="lazy">
-							</picture>
-						</div>
-						<figcaption class="screenshot-title">PhahTaigi 佈局</figcaption>
-					</figure>
+					{% endfor %}
 				</div>
 
 				<hr class="section-divider-inner">
 
 				<picture>
 					<source srcset="{{ '/assets/keyboard-layout-3.webp' | relative_url }}" type="image/webp">
-					<img src="{{ '/assets/keyboard-layout-3.png' | relative_url }}" alt="台語齒盤拍字範例" width="2048" height="1144"
-						loading="lazy">
+					<img src="{{ '/assets/keyboard-layout-3.png' | relative_url }}" alt="台語齒盤拍字範例" width="2048" height="1144" loading="lazy">
 				</picture>
 			</div>
 		</div>
@@ -306,44 +251,24 @@
 		<h2 class="section-title">{{ site.nav_labels.how_to_use }}</h2>
 
 		<div class="setup-steps">
+			{% for step in site.how_to_use.steps %}
 			<div class="setup-step">
-				<div class="step-number">1</div>
+				<div class="step-number">{{ forloop.index }}</div>
 				<div class="step-image">
 					<picture>
-						<source srcset="{{ '/assets/setup-1.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/setup-1.png' | relative_url }}" alt="台語齒盤設定步驟一：進入系統設定" width="500" height="1034"
-							loading="lazy">
+						<source srcset="{{ '/assets/' | append: step.image | append: '.webp' | relative_url }}" type="image/webp">
+						<img src="{{ '/assets/' | append: step.image | append: '.png' | relative_url }}" alt="{{ step.alt }}" width="500" height="1034" loading="lazy">
 					</picture>
 				</div>
-				<p class="step-description">去【設定】>【一般/系統】>【齒盤】</p>
+				<p class="step-description">{{ step.description }}</p>
 			</div>
-			<div class="setup-step">
-				<div class="step-number">2</div>
-				<div class="step-image">
-					<picture>
-						<source srcset="{{ '/assets/setup-2.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/setup-2.png' | relative_url }}" alt="台語齒盤設定步驟二：加入鍵盤" width="500" height="1034"
-							loading="lazy">
-					</picture>
-				</div>
-				<p class="step-description">點【齒盤】>【加入台語齒盤】</p>
-			</div>
-			<div class="setup-step">
-				<div class="step-number">3</div>
-				<div class="step-image">
-					<picture>
-						<source srcset="{{ '/assets/setup-3.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/setup-3.png' | relative_url }}" alt="台語齒盤設定步驟三：開始使用" width="500" height="1034"
-							loading="lazy">
-					</picture>
-				</div>
-				<p class="step-description">選【台語齒盤】開始使用</p>
-			</div>
+			{% endfor %}
 		</div>
 
 		<div class="setup-note">
-			<p>※ 無仝牌子的手機仔設定可能無仝，但是啟用方法攏差不多</p>
-			<p>※ 「允准完整取用」是予齒盤會當捌你揤 ê 動作，成做你拍 ê 字，台語齒盤袂收集任何資料</p>
+			{% for note in site.how_to_use.notes %}
+			<p>{{ note }}</p>
+			{% endfor %}
 		</div>
 
 	</section>
@@ -354,10 +279,9 @@
 		<div class="feature-item" style="margin-bottom: 0;">
 			<div class="feature-content">
 				<h2>{{ site.nav_labels.sponsor }}</h2>
-				<p>感謝支持台語齒盤！台語齒盤是一人團隊，由我一个人塌錢開發佮維護，因為有你的贊助，予我有氣力繼續行落去，咱做伙為著台語打拼</p>
+				<p>{{ site.sponsor.description }}</p>
 			</div>
-			<a href="https://portaly.cc/siansiansu/support" target="_blank" rel="noopener noreferrer"
-				class="sponsor-button">去贊助頁面</a>
+			<a href="{{ site.sponsor.link }}" target="_blank" rel="noopener noreferrer" class="sponsor-button">{{ site.sponsor.button_text }}</a>
 		</div>
 	</section>
 
