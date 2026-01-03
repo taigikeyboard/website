@@ -32,3 +32,9 @@ webp-all:
 			cwebp -q 85 -quiet "$$f" -o "$$output" 2>/dev/null || true; \
 		fi; \
 	done
+	@find assets -name "*.gif" -type f | while read f; do \
+		output="$${f%.gif}.webp"; \
+		if [ ! -f "$$output" ] || [ "$$f" -nt "$$output" ]; then \
+			gif2webp -q 85 -m 6 "$$f" -o "$$output" 2>/dev/null || true; \
+		fi; \
+	done
