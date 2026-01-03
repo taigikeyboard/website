@@ -141,7 +141,7 @@ features:
       - 「拍字記持詞庫」加「連紲建議詞」功能，予輸入法愈拍愈巧。
 
   - title: 定期加入上新 ê 詞庫
-    description: 定期翻新教典、公視台語新詞詞庫。上新 ê 台語詞攏揣有。
+    description: 定期翻新教典、公視台語新詞詞庫，上新 ê 台語詞攏揣有。
 
   - title: 詞庫管理頁面
     image: dictionary
@@ -152,7 +152,7 @@ features:
     description: 依據教典 ê 資料標示台語異用字。
 
   - title: 自動大寫開關
-    description: 若關起來，拍 ê 羅馬字攏用小寫。
+    description: 若關起來，拍 ê 羅馬字攏是小寫。
 
   # Font
   - title: 台語字骨 thang 切換
@@ -164,12 +164,12 @@ features:
     description: 專為台灣人 ê 拍字習慣設計，無用中国人寫 ê 拍字 ia̋n-jín，絕對 MIT。
 
   - title: 保護你 ê 資料
-    description: 無連網路，資料攏留佇你 ê 手機仔內底，無偷錄你 ê 私人資料。
+    description: 無連網路、無偷錄你 ê 私人資料，請放心使用。
 
   - title: 定期升級維護 APP
     description: 依據手機仔牌子升級上新 ê 版本，修理資安破空。
 
-  - title: 支持台語教育使用
+  - title: 永遠支持台語教育使用
     description: 免錢、無廣告、袂做付費功能。
 
 # =============================================================================
