@@ -135,13 +135,22 @@
 					<h3>{{ feature.title }}</h3>
 					{% if feature.image %}
 					<div class="feature-image">
-						<picture>
-							<source srcset="{{ '/assets/' | append: feature.image | replace: '.png', '.webp' | relative_url }}" type="image/webp">
-							<img src="{{ '/assets/' | append: feature.image | relative_url }}" alt="{{ feature.title }}" loading="lazy">
-						</picture>
+						{% if feature.image contains '.' %}
+							<img src="{{ '/assets/' | append: feature.image | replace: '.png', '.webp' | relative_url }}" alt="{{ feature.title }}" loading="lazy">
+						{% else %}
+							<img src="{{ '/assets/' | append: feature.image | append: '.webp' | relative_url }}" alt="{{ feature.title }}" loading="lazy">
+						{% endif %}
 					</div>
 					{% endif %}
-					<p>{{ feature.description }}</p>
+					{% if feature.description %}
+						{% if feature.description.first %}
+							{% for paragraph in feature.description %}
+							<p>{{ paragraph }}</p>
+							{% endfor %}
+						{% else %}
+							<p>{{ feature.description }}</p>
+						{% endif %}
+					{% endif %}
 				</div>
 			</div>
 			{% endif %}

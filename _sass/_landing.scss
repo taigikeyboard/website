@@ -267,7 +267,11 @@ section {
 	font-size: 1.7rem;
 	color: var(--color-text-secondary);
 	line-height: 1.6;
-	margin: 0;
+	margin: 0 0 1.2rem 0;
+}
+
+.feature-card-content p:last-child {
+	margin-bottom: 0;
 }
 
 .feature-section {

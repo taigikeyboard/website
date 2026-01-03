@@ -145,12 +145,18 @@ sponsor:
 # =============================================================================
 
 features:
-  - title: 方便揤 Emoji
-    image: emoji-keyboard.webp
+  - title: 方便切換表情齒盤
+    image: emoji-keyboard
     description: 台語齒盤內底寄表情齒盤，拍字兼拍表情，加添拍字 ê 趣味。
 
-  - title: 支持白話字、台羅佮漢字
-    description: 予你用家己慣勢 ê 方式來拍台語
+  - title: 白話字、台羅、英文方便切換
+    image: english-keyboard
+    description: 齒盤面頂有揤鈕通揤，白話字、台羅、英語切換誠利便。
+
+  - title: 3 段式大小寫切換
+    description:
+      - 一般 ê 情況第 1 个字會自動大寫，shift 揤鈕會反烏，但是若「自動開關」有關起來，著愛家己揤 shift 揤鈕，第 1 個字才會變大寫。
+      - 連紲揤 Shift 鍵 2 改是 Caps Lock 模式，shift 揤鈕是烏色，圖示嘛無仝款，這時陣拍出來 ê 字攏會變大寫，閣揤 1 改才會改轉來小寫。
 
   - title: 支持 PhahTaigi 佈局
     description: 利便習慣 PhahTaigi 齒盤 ê 使用者

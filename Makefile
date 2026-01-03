@@ -17,7 +17,12 @@ install:
 
 webp:
 	@if [ -n "$(FILE)" ] && [ -f "$(FILE)" ]; then \
-		cwebp -q 85 -quiet "$(FILE)" -o "$${FILE%.png}.webp" 2>/dev/null || true; \
+		output="$${FILE%.*}.webp"; \
+		case "$(FILE)" in \
+			*.gif) gif2webp -q 85 -m 6 "$(FILE)" -o "$$output" 2>/dev/null || true ;; \
+			*.png) cwebp -q 85 -quiet "$(FILE)" -o "$$output" 2>/dev/null || true ;; \
+			*) echo "Unsupported format. Use .png or .gif" ;; \
+		esac; \
 	fi
 
 webp-all:
