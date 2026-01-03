@@ -43,6 +43,7 @@ twitter:
 # =============================================================================
 
 nav_labels:
+  about: 關於齒盤
   features: 功能特色
   screenshots: 齒盤外觀
   how_to_type: 按怎拍字
@@ -63,7 +64,7 @@ hero:
 # =============================================================================
 
 about:
-  title: 關於台語齒盤
+  title: 關於齒盤
   paragraphs:
     - 台語齒盤是專為台語使用者設計 ê 手機仔拍字家私，支持 iOS 佮 Android 2 種系統。無論你習慣用白話字、教育部台羅，抑是直接拍出漢字，台語齒盤攏會當滿足你 ê 需要。
     - 台語齒盤保證免費、無廣告，以後袂做付費功能。咱 ê 目標是 thui-sak 台語教育，予逐家輕輕鬆鬆用母語來拍字、寫文章、傳消息。
@@ -73,27 +74,7 @@ about:
 # =============================================================================
 
 screenshots:
-  platform_note: Android 佮 iOS 手機仔的齒盤外觀有小可仔無仝，毋過使用的體驗攏仝款
-  other_screenshots_title: 其他畫面
-  items:
-    - title: Emoji 齒盤
-      image: feature-1
-      alt: 台語 Emoji 齒盤
-    - title: PhahTagi 佈局
-      image: feature-2
-      alt: PhahTaigi 鍵盤佈局
-    - title: 齒盤設定
-      image: feature-3
-      alt: 台語齒盤設定介面
-    - title: Open 粉圓字骨
-      image: feature-4
-      alt: Open 粉圓字型顯示
-    - title: 全羅模式
-      image: feature-5
-      alt: 全羅拼音輸入模式
-    - title: 暗色模式
-      image: feature-6
-      alt: 暗色主題模式
+  platform_note: Android 佮 iOS 齒盤外觀有小可仔無仝，毋過使用體驗攏仝款。
 
 # =============================================================================
 # Content - How to Type Section
@@ -101,16 +82,7 @@ screenshots:
 
 how_to_type:
   notes:
-    - 若拍漢字，會自動使用全形標點符號，拍羅馬字會自動切去半形標點符號，建議的候選詞會顯示佇頂頭，嘛會使褫開看較清楚
-    - 點入去齒盤 APP 內底，會看著【齒盤設定】，依你的拍字習慣調整
-    - 兩種拍字佈局會當選
-  layouts:
-    - title: 標準佈局 (Lohankha 齒盤)
-      image: qwerty-layout
-      alt: 標準佈局 Lohankha 齒盤
-    - title: PhahTaigi 佈局
-      image: phahtaigi-layout
-      alt: PhahTaigi 佈局
+    - 若拍漢字，會自動使用全形標點符號，拍羅馬字會自動切去半形標點符號，建議 ê 候選詞會顯示佇頂頭，嘛會使褫開看較清楚。
 
 # =============================================================================
 # Content - How to Use Section
@@ -118,25 +90,22 @@ how_to_type:
 
 how_to_use:
   steps:
-    - description: 去【設定】>【一般/系統】>【齒盤】
+    - description: 【設定】>【一般/系統】>【齒盤】
       image: setup-1
-      alt: 台語齒盤設定步驟一：進入系統設定
-    - description: 點【齒盤】>【加入台語齒盤】
+      alt: 台語齒盤設定步驟：入去系統設定
+    - description: 點【齒盤】>【加入台語齒盤】>【允准完整取用】
       image: setup-2
-      alt: 台語齒盤設定步驟二：加入鍵盤
-    - description: 選【台語齒盤】開始使用
-      image: setup-3
-      alt: 台語齒盤設定步驟三：開始使用
+      alt: 台語齒盤設定步驟：加入鍵盤
   notes:
-    - ※ 無仝牌子的手機仔設定可能無仝，但是啟用方法攏差不多
-    - ※ 「允准完整取用」是予齒盤會當捌你揤 ê 動作，成做你拍 ê 字，台語齒盤袂收集任何資料
+    - ※ 無仝牌子 ê 手機仔設定可能無仝，但是啟用方法攏差不多。
+    - ※ 「允准完整取用」是予齒盤會當捌你揤 ê 動作，成做你拍 ê 字，請放心，台語齒盤袂偷錄任何資料。
 
 # =============================================================================
 # Content - Sponsor Section
 # =============================================================================
 
 sponsor:
-  description: 感謝支持台語齒盤！台語齒盤是一人團隊，由我一个人塌錢開發佮維護，因為有你的贊助，予我有氣力繼續行落去，咱做伙為著台語打拼
+  description: 台語齒盤是 1 人團隊，目前由我 1 个人塌錢開發佮維護。若是你認同台語齒盤 ê 理念，歡迎贊助支持，予我有氣力繼續行落去，咱做伙為著台語打拼 💪。
   button_text: 去贊助頁面
   link: https://portaly.cc/siansiansu/support
 
@@ -145,11 +114,7 @@ sponsor:
 # =============================================================================
 
 features:
-  - title: 表情齒盤切換
-    image: emoji-keyboard
-    description: 台語齒盤內底寄表情齒盤，拍字兼拍表情，加添拍字 ê 趣味。
-
-  - title: 白話字、台羅、英文切換
+  - title: 白話字、台羅、英語齒盤切換
     image: english-keyboard
     description: 齒盤面頂有揤鈕通揤，白話字、台羅、英語切換誠利便。
 
@@ -157,26 +122,55 @@ features:
     image: shift-button
     description: 一般 ê 情況第 1 个字會自動大寫，shift 揤鈕會反烏。連紲揤 Shift 鍵 2 改是 Caps Lock 模式，shift 揤鈕是烏色，圖示嘛無仝款，這時陣拍出來 ê 字攏會變大寫，閣揤 1 改才會改轉來小寫。
 
-  - title: 支持 PhahTaigi 佈局
-    description: 利便習慣 PhahTaigi 齒盤 ê 使用者
+  - title: 揀選使用慣勢 ê 齒佈
+    image: layout
+    description: 依據你 ê 使用習慣，選你佮意 ê 齒佈。
 
-  - title: 支持 Open 粉圓字骨
-    description: 正港台語字骨，罕得 ê 字嘛方便看
+  - title: 表情齒盤切換
+    image: emoji-keyboard
+    description: 台語齒盤內底寄表情齒盤，拍字兼拍表情，加添拍字 ê 趣味。
 
-  - title: 台灣人寫 ê 拍字演算法
-    description: 專為台語設計，無用中国人寫 ê 拍字 ia̋n-jín
+  - title: 連紲建議詞
+    image: nextword
+    description: 拍字會連紲建議，免去想 2 个以上 ê 音節按怎拍。
 
-  - title: 保護你 ê 資料
-    description: 資料攏留佇你 ê 手機仔內底，無收你 ê 資料
+  - title: 拍字記持詞庫
+    image: user-dictionary
+    description:
+      - 特別設計「拍字記持詞庫」，拍過 ê 字攏會記起來，較捷拍著會出現佇頭前，愈久無拍，著會沓沓仔排佇後壁。
+      - 「拍字記持詞庫」加「連紲建議詞」功能，予輸入法愈拍愈巧。
 
   - title: 定期加入上新 ê 詞庫
-    description: 台語新詞嘛攏揣有
+    description: 定期翻新教典、公視台語新詞詞庫。上新 ê 台語詞攏揣有。
+
+  - title: 詞庫管理頁面
+    image: dictionary
+    description: 佇「詞庫」頁面會使選拍字使用 ê 詞庫，無仝詞庫收錄 ê 字有依家己 ê 特色。
+
+  - title: 異用字開關
+    image: variants
+    description: 依據教典 ê 資料標示台語異用字。
+
+  - title: 自動大寫開關
+    description: 若關起來，拍 ê 羅馬字攏用小寫。
+
+  # Font
+  - title: 台語字骨 thang 切換
+    image: font
+    description: 預設使用粉圓字骨，嘛有芫荽字骨通選。
+
+  # Others
+  - title: 台灣人寫 ê 拍字演算法
+    description: 專為台灣人 ê 拍字習慣設計，無用中国人寫 ê 拍字 ia̋n-jín，絕對 MIT。
+
+  - title: 保護你 ê 資料
+    description: 無連網路，資料攏留佇你 ê 手機仔內底，無偷錄你 ê 私人資料。
 
   - title: 定期升級維護 APP
-    description: 改進使用體驗，修理資安破空
+    description: 依據手機仔牌子升級上新 ê 版本，修理資安破空。
 
   - title: 支持台語教育使用
-    description: 免錢、無廣告、袂做付費功能
+    description: 免錢、無廣告、袂做付費功能。
 
 # =============================================================================
 # Social & Contact

@@ -136,20 +136,22 @@
 					{% if feature.image %}
 					<div class="feature-image">
 						{% if feature.image contains '.' %}
-							<img src="{{ '/assets/' | append: feature.image | replace: '.png', '.webp' | relative_url }}" alt="{{ feature.title }}" loading="lazy">
+						<img src="{{ '/assets/' | append: feature.image | replace: '.png', '.webp' | relative_url }}"
+							alt="{{ feature.title }}" loading="lazy">
 						{% else %}
-							<img src="{{ '/assets/' | append: feature.image | append: '.webp' | relative_url }}" alt="{{ feature.title }}" loading="lazy">
+						<img src="{{ '/assets/' | append: feature.image | append: '.webp' | relative_url }}"
+							alt="{{ feature.title }}" loading="lazy">
 						{% endif %}
 					</div>
 					{% endif %}
 					{% if feature.description %}
-						{% if feature.description.first %}
-							{% for paragraph in feature.description %}
-							<p>{{ paragraph }}</p>
-							{% endfor %}
-						{% else %}
-							<p>{{ feature.description }}</p>
-						{% endif %}
+					{% if feature.description.first %}
+					{% for paragraph in feature.description %}
+					<p>{{ paragraph }}</p>
+					{% endfor %}
+					{% else %}
+					<p>{{ feature.description }}</p>
+					{% endif %}
 					{% endif %}
 				</div>
 			</div>
@@ -188,23 +190,6 @@
 			</figure>
 		</div>
 
-		<hr class="section-divider-inner">
-
-		<p class="subsection-title"><strong>{{ site.screenshots.other_screenshots_title }}</strong></p>
-
-		<div class="screenshots-grid">
-			{% for item in site.screenshots.items %}
-			<figure class="screenshot-item">
-				<div class="screenshot-image">
-					<picture>
-						<source srcset="{{ '/assets/' | append: item.image | append: '.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/' | append: item.image | append: '.webp' | relative_url }}" alt="{{ item.alt }}" width="866" height="1792" loading="lazy">
-					</picture>
-				</div>
-				<figcaption class="screenshot-title">{{ item.title }}</figcaption>
-			</figure>
-			{% endfor %}
-		</div>
 
 	</section>
 
@@ -217,38 +202,16 @@
 			<div class="keyboard-layout-image">
 				<picture>
 					<source srcset="{{ '/assets/keyboard-layout-1.webp' | relative_url }}" type="image/webp">
-					<img src="{{ '/assets/keyboard-layout-1.webp' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144" loading="lazy">
+					<img src="{{ '/assets/keyboard-layout-1.webp' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144"
+						loading="lazy">
 				</picture>
-				<hr class="section-divider-inner">
-				<p class="section-note">{{ site.how_to_type.notes[1] }}</p>
-				<picture>
-					<source srcset="{{ '/assets/keyboard-layout-2.webp' | relative_url }}" type="image/webp">
-					<img src="{{ '/assets/keyboard-layout-2.webp' | relative_url }}" alt="台語齒盤基本使用說明" width="2048" height="1144" loading="lazy">
-				</picture>
-
-				<hr class="section-divider-inner">
-
-				<p class="section-note">{{ site.how_to_type.notes[2] }}</p>
-
-				<div class="platform-comparison">
-					{% for layout in site.how_to_type.layouts %}
-					<figure class="screenshot-item">
-						<div class="screenshot-image">
-							<picture>
-								<source srcset="{{ '/assets/' | append: layout.image | append: '.webp' | relative_url }}" type="image/webp">
-								<img src="{{ '/assets/' | append: layout.image | append: '.webp' | relative_url }}" alt="{{ layout.alt }}" width="450" height="931" loading="lazy">
-							</picture>
-						</div>
-						<figcaption class="screenshot-title">{{ layout.title }}</figcaption>
-					</figure>
-					{% endfor %}
-				</div>
 
 				<hr class="section-divider-inner">
 
 				<picture>
 					<source srcset="{{ '/assets/keyboard-layout-3.webp' | relative_url }}" type="image/webp">
-					<img src="{{ '/assets/keyboard-layout-3.webp' | relative_url }}" alt="台語齒盤拍字範例" width="2048" height="1144" loading="lazy">
+					<img src="{{ '/assets/keyboard-layout-3.webp' | relative_url }}" alt="台語齒盤拍字範例" width="2048" height="1144"
+						loading="lazy">
 				</picture>
 			</div>
 		</div>
@@ -266,7 +229,8 @@
 				<div class="step-image">
 					<picture>
 						<source srcset="{{ '/assets/' | append: step.image | append: '.webp' | relative_url }}" type="image/webp">
-						<img src="{{ '/assets/' | append: step.image | append: '.webp' | relative_url }}" alt="{{ step.alt }}" width="500" height="1034" loading="lazy">
+						<img src="{{ '/assets/' | append: step.image | append: '.webp' | relative_url }}" alt="{{ step.alt }}"
+							width="500" height="1034" loading="lazy">
 					</picture>
 				</div>
 				<p class="step-description">{{ step.description }}</p>
@@ -290,7 +254,8 @@
 				<h2>{{ site.nav_labels.sponsor }}</h2>
 				<p>{{ site.sponsor.description }}</p>
 			</div>
-			<a href="{{ site.sponsor.link }}" target="_blank" rel="noopener noreferrer" class="sponsor-button">{{ site.sponsor.button_text }}</a>
+			<a href="{{ site.sponsor.link }}" target="_blank" rel="noopener noreferrer" class="sponsor-button">{{
+				site.sponsor.button_text }}</a>
 		</div>
 	</section>
 
