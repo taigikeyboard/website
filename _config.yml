@@ -197,7 +197,12 @@ exclude:
   - Gemfile.lock
   - vendor
   - .bundle
-  - taigi-converter
+  - taigi-converter/tests
+  - taigi-converter/scripts
+  - taigi-converter/package.json
+  - taigi-converter/Makefile
+  - taigi-converter/LICENSE
+  - taigi-converter/jf-openhuninn-2.1.ttf
 
 collections:
   pages:

@@ -1,0 +1,12 @@
+{
+  "name": "taigi-converter",
+  "version": "0.1.0",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "scripts": {
+    "test": "node --test tests/",
+    "build:dict": "node scripts/build-dictionary.js"
+  }
+}
