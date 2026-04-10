@@ -1,7 +1,9 @@
 source "https://rubygems.org"
 
-# GitHub Pages gem（自動包含 Jekyll 和其他依賴）
-gem "github-pages", "~> 232", group: :jekyll_plugins
-
-# Ruby 3+ 需要 webrick
+gem "jekyll", "~> 4.4"
 gem "webrick", "~> 1.9"
+
+group :jekyll_plugins do
+  gem "jekyll-sitemap"
+  gem "jekyll-seo-tag"
+end
