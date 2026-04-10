@@ -197,6 +197,7 @@ exclude:
   - Gemfile.lock
   - vendor
   - .bundle
+  - taigi-converter
 
 collections:
   pages:
