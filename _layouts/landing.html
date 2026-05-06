@@ -252,11 +252,20 @@
 		<div class="feature-item" style="margin-bottom: 0;">
 			<div class="feature-content">
 				<h2>{{ site.nav_labels.sponsor }}</h2>
-				<p>{{ site.sponsor.description }}</p>
+				{% for paragraph in site.sponsor.paragraphs %}
+				<p>{{ paragraph }}</p>
+				{% endfor %}
 			</div>
 			<a href="{{ site.sponsor.link }}" target="_blank" rel="noopener noreferrer" class="sponsor-button">{{
 				site.sponsor.button_text }}</a>
 		</div>
+	</section>
+
+	<hr class="section-divider">
+
+	<section id="issues" class="issues-section">
+		<h2 class="section-title">{{ site.nav_labels.issues }}</h2>
+		<p class="section-note">無論是使用上拄著 ê 問題、感覺好用 ê 所在，抑是會當改進 ê 建議，攏歡迎寄批 info@taigikeyboard.tw 予我！</p>
 	</section>
 
 	<footer>
@@ -266,8 +275,8 @@
 				<a href="#screenshots">{{ site.nav_labels.screenshots }}</a>
 				<a href="#how-to-type">{{ site.nav_labels.how_to_type }}</a>
 				<a href="#how-to-use">{{ site.nav_labels.how_to_use }}</a>
-				<a href="{{ '/issues' | relative_url }}">{{ site.nav_labels.issues }}</a>
 				<a href="#sponsor">{{ site.nav_labels.sponsor }}</a>
+				<a href="#issues">{{ site.nav_labels.issues }}</a>
 				<a href="{{ '/privacypolicy.html' | relative_url }}">{{ site.nav_labels.privacy_policy }}</a>
 			</div>
 

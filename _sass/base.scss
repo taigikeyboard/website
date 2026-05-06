@@ -1,3 +1,5 @@
+@use "config";
+
 // Layout and grids
 $content-width: 1170px;
 
@@ -13,7 +15,7 @@ html {
 
 body {
 	font-size: 2rem;
-	background-color: $body-color;
+	background-color: config.$body-color;
 }
 
 .subPageBody {
@@ -36,7 +38,7 @@ h3 {
 body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: $body-color;
+	background-color: config.$body-color;
 }
 
 // Removed global link styles to avoid conflicts with component-specific styles
